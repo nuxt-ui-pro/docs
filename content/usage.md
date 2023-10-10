@@ -1,0 +1,14 @@
+---
+title: Usage
+description: 'Welcome to Nuxt UI Pro documentation template.'
+---
+
+## Installation
+
+1. Open https://github.com/nuxt-ui-pro/docs
+2. Click on "Use this template" button
+3. Enter repository name and click on "Create repository from template" button
+4. Clone your new repository
+5. Install dependencies with your favorite package manager
+6. Start development server
+
