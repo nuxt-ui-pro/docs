@@ -1,10 +1,15 @@
 <script setup lang="ts">
+import type { NuxtError } from '#app'
 import type { ParsedContent } from '@nuxt/content/dist/runtime/types'
 
 useSeoMeta({
-  ogSiteName: 'Nuxt UI Pro - Docs template',
-  twitterCard: 'summary_large_image'
+  title: 'Page not found',
+  description: 'We are sorry but this page could not be found.'
 })
+
+defineProps<{
+  error: NuxtError
+}>()
 
 useHead({
   htmlAttrs: {
@@ -26,11 +31,15 @@ provide('navigation', navigation)
 <template>
   <Header />
 
-  <NuxtLayout>
-    <NuxtPage />
-  </NuxtLayout>
+  <UContainer>
+    <UMain>
+      <UPage>
+        <UPageError :error="error" />
+      </UPage>
+    </UMain>
+  </UContainer>
 
-  <Footer />
+  <UFooter />
 
   <ClientOnly>
     <LazyUDocsSearch :files="files" :navigation="navigation" />
