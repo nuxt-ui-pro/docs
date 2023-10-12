@@ -13,6 +13,7 @@ watch(() => route.path, refreshPage)
     <UContainer>
       <ULandingHero v-if="page?.hero" v-bind="page.hero">
         <template #title>
+          <!-- eslint-disable-next-line vue/no-v-html -->
           <span v-html="page.hero.title" />
         </template>
       </ULandingHero>
