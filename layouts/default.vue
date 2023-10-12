@@ -8,9 +8,6 @@ const { data: navigation } = useNuxtData('navigation')
       <UPage>
         <template #left>
           <UAside>
-            <template #top>
-              <UDocsSearchButton size="md" />
-            </template>
             <UNavigationTree :links="mapContentNavigation(navigation)" />
           </UAside>
         </template>
