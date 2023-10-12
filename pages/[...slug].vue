@@ -24,7 +24,7 @@ const communityLinks = computed(() => [
   {
     icon: 'i-ph-pen-duotone',
     label: 'Edit this page',
-    to: `https://github.com/nuxt-ui-pro/docs/edit/main/docs/content/${page?.value?._file}`,
+    to: `https://github.com/nuxt-ui-pro/docs/edit/main/content/${page?.value?._file}`,
     target: '_blank',
   },
   {
