@@ -1,4 +1,11 @@
-<script setup>
+<script setup lang="ts">
+useServerSeoMeta({
+  ogSiteName: 'Nuxt UI Pro - Docs template',
+  twitterCard: 'summary_large_image',
+  ogImage: '/social-card.png',
+  twitterImage: '/social-card.png'
+})
+
 const { data: navigation } = await useAsyncData('navigation', () => fetchContentNavigation())
 const { data: files } = useLazyFetch('/api/search.json', {
   default: () => [],
@@ -18,7 +25,7 @@ const { data: files } = useLazyFetch('/api/search.json', {
         variant="ghost"
       />
       <UButton
-        aria-label="Nuxt UI Pro Docs on GitHub"
+        aria-label="Docs template on GitHub"
         to="https://github.com/nuxt-ui-pro/docs"
         icon="i-simple-icons-github"
         target="_blank"

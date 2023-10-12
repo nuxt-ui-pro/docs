@@ -9,12 +9,11 @@ const { data: surround } = await useAsyncData(`docs-${route.path}-surround`, () 
   .where({ _extension: 'md', navigation: { $ne: false } })
   .findSurround(route.path.endsWith('/') ? route.path.slice(0, -1) : route.path),
 )
-const isProvider = page.value._path.startsWith('/providers')
 
 useSeoMeta({
-  titleTemplate: isProvider ? '%s - Nuxt Image Providers' : '%s - Nuxt Image',
+  titleTemplate: '%s - Nuxt UI Pro - Docs template',
   title: page.value.title,
-  ogTitle: `${page.value.title} - ${isProvider ? 'Nuxt Image Providers' : 'Nuxt Image'}`,
+  ogTitle: `${page.value.title} - Nuxt UI Pro - Docs template`,
   description: page.value.description,
   ogDescription: page.value.description
 })
