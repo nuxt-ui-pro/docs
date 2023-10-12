@@ -27,13 +27,13 @@ defineOgImage({
 const headline = computed(() => findPageHeadline(page.value))
 const communityLinks = computed(() => [
   {
-    icon: 'i-ph-pen-duotone',
+    icon: 'i-heroicons-pencil-solid',
     label: 'Edit this page',
     to: `https://github.com/nuxt-ui-pro/docs/edit/main/content/${page?.value?._file}`,
     target: '_blank',
   },
   {
-    icon: 'i-ph-shooting-star-duotone',
+    icon: 'i-heroicons-star-solid',
     label: 'Star on GitHub',
     to: 'https://github.com/nuxt/ui',
     target: '_blank',

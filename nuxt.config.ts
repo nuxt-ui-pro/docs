@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     'nuxt-og-image'
   ],
   ui: {
-    icons: ['ph', 'simple-icons']
+    icons: ['simple-icons']
   },
   nitro: {
     prerender: {
