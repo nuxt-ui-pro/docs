@@ -8,5 +8,12 @@ export default defineNuxtConfig({
   ],
   ui: {
     icons: ['ph', 'simple-icons']
+  },
+  nitro: {
+    prerender: {
+      routes: [
+        '/api/search.json'
+      ]
+    }
   }
 })
