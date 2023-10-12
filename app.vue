@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { ParsedContent } from '@nuxt/content/dist/runtime/types'
+
 useSeoMeta({
   ogSiteName: 'Nuxt UI Pro - Docs template',
   twitterCard: 'summary_large_image'
@@ -10,8 +12,10 @@ useHead({
   }
 })
 
-const { data: navigation } = await useAsyncData('navigation', () => fetchContentNavigation())
-const { data: files } = useLazyFetch('/api/search.json', {
+const { data: navigation } = await useAsyncData('navigation', () => fetchContentNavigation(), {
+  default: () => []
+})
+const { data: files } = useLazyFetch<ParsedContent[]>('/api/search.json', {
   default: () => [],
   server: false,
 })
