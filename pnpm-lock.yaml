@@ -5,9 +5,6 @@ settings:
   excludeLinksFromLockfile: false
 
 devDependencies:
-  '@iconify-json/ph':
-    specifier: ^1.1.6
-    version: 1.1.6
   '@iconify-json/simple-icons':
     specifier: ^1.1.74
     version: 1.1.74
@@ -863,12 +860,6 @@ packages:
 
   /@iconify-json/heroicons@1.1.12:
     resolution: {integrity: sha512-9tsn/xUU+HX56OngEDRTej4LzVm2qcMVLvEJ+q+1ZJBO4sjMDxycmbHq16HGl1LOeVG21fq4jNZHslVveVCwSQ==}
-    dependencies:
-      '@iconify/types': 2.0.0
-    dev: true
-
-  /@iconify-json/ph@1.1.6:
-    resolution: {integrity: sha512-dexzEndlXQX/sbQhnEpA94Pby6JCGV2tZToSGcPPQpbilDGyk5VMd0ymusYoocRAn6+qLpGRvMoz5XFKGqP+VA==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: true
