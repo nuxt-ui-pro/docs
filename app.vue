@@ -1,9 +1,7 @@
 <script setup lang="ts">
-useServerSeoMeta({
+useSeoMeta({
   ogSiteName: 'Nuxt UI Pro - Docs template',
-  twitterCard: 'summary_large_image',
-  ogImage: '/social-card.png',
-  twitterImage: '/social-card.png'
+  twitterCard: 'summary_large_image'
 })
 
 useHead({

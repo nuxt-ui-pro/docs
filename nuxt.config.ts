@@ -4,7 +4,8 @@ export default defineNuxtConfig({
   extends: '@nuxt/ui-pro',
   modules: [
     '@nuxt/ui',
-    '@nuxt/content'
+    '@nuxt/content',
+    'nuxt-og-image'
   ],
   ui: {
     icons: ['ph', 'simple-icons']

@@ -1,5 +1,3 @@
-![nuxt-content-social-card](./public/social-card.png)
-
 # Nuxt UI Pro: Docs template
 
 Look at [Nuxt docs](https://nuxt.com/docs/getting-started/introduction) and [Nuxt UI Pro docs](https://ui.nuxt.com/pro) to learn more.
