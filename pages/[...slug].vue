@@ -1,13 +1,18 @@
 <script setup lang="ts">
+import type { ParsedContent } from '@nuxt/content/dist/runtime/types'
+import { withoutTrailingSlash } from 'ufo'
+
 const route = useRoute()
 
-const { data: page } = await useAsyncData(`docs-${route.path}`, () => queryContent(route.path).findOne())
-if (!page.value)
+const page = inject<Ref<ParsedContent>>('page')
+if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
+}
 
-const { data: surround } = await useAsyncData(`docs-${route.path}-surround`, () => queryContent()
+const { data: surround } = await useAsyncData(`${route.path}-surround`, () => queryContent()
   .where({ _extension: 'md', navigation: { $ne: false } })
-  .findSurround(route.path.endsWith('/') ? route.path.slice(0, -1) : route.path),
+  .only(['title', 'description', '_path'])
+  .findSurround(withoutTrailingSlash(route.path))
 )
 
 useSeoMeta({
@@ -25,43 +30,43 @@ defineOgImage({
 })
 
 const headline = computed(() => findPageHeadline(page.value))
-const communityLinks = computed(() => [
-  {
-    icon: 'i-heroicons-pencil-solid',
-    label: 'Edit this page',
-    to: `https://github.com/nuxt-ui-pro/docs/edit/main/content/${page?.value?._file}`,
-    target: '_blank',
-  },
-  {
-    icon: 'i-heroicons-star-solid',
-    label: 'Star on GitHub',
-    to: 'https://github.com/nuxt/ui',
-    target: '_blank',
-  },
-  {
-    icon: 'i-simple-icons-nuxtdotjs',
-    label: 'Purchase UI Pro',
-    to: 'https://ui.nuxt.com/pro/purchase',
-    target: '_blank',
-  },
-])
+
+const communityLinks = computed(() => [{
+  icon: 'i-heroicons-pencil-square',
+  label: 'Edit this page',
+  to: `https://github.com/nuxt-ui-pro/docs/edit/main/content/${page?.value?._file}`,
+  target: '_blank',
+}, {
+  icon: 'i-heroicons-star',
+  label: 'Star on GitHub',
+  to: 'https://github.com/nuxt/ui',
+  target: '_blank',
+}, {
+  icon: 'i-simple-icons-nuxtdotjs',
+  label: 'Purchase UI Pro',
+  to: 'https://ui.nuxt.com/pro/purchase',
+  target: '_blank',
+}])
 </script>
 
 <template>
   <UPage>
     <UPageHeader :title="page.title" :description="page.description" :links="page.links" :headline="headline" />
 
-    <UPageBody prose class="pb-0">
+    <UPageBody prose>
       <ContentRenderer v-if="page.body" :value="page" />
-      <hr v-if="surround?.length" class="my-8">
-      <UDocsSurround :surround="surround" />
+
+      <hr v-if="surround?.length">
+
+      <UDocsSurround :surround="(surround as ParsedContent[])" />
     </UPageBody>
 
     <template v-if="page.body?.toc?.links?.length" #right>
       <UDocsToc :links="page.body.toc.links">
         <template #bottom>
           <div class="hidden lg:block space-y-6 !mt-6">
-            <UDivider v-if="page.body?.toc?.links?.length" dashed />
+            <UDivider v-if="page.body?.toc?.links?.length" type="dashed" />
+
             <UPageLinks title="Community" :links="communityLinks" />
           </div>
         </template>

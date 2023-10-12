@@ -1,14 +1,14 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  extends: '@nuxt/ui-pro',
+  extends: process.env.NUXT_UI_PRO_PATH || '@nuxt/ui-pro',
   modules: [
     '@nuxt/ui',
     '@nuxt/content',
     'nuxt-og-image'
   ],
   ui: {
-    icons: ['simple-icons']
+    icons: ['heroicons', 'simple-icons']
   },
   nitro: {
     prerender: {
