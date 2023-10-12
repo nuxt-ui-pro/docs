@@ -44,6 +44,10 @@ const { data: files } = useLazyFetch<ParsedContent[]>('/api/search.json', {
         variant="ghost"
       />
     </template>
+
+    <template #panel>
+      <UNavigationTree :links="mapContentNavigation(navigation)" />
+    </template>
   </UHeader>
 
   <NuxtLayout>
