@@ -6,6 +6,12 @@ useServerSeoMeta({
   twitterImage: '/social-card.png'
 })
 
+useHead({
+  htmlAttrs: {
+    lang: 'en'
+  }
+})
+
 const { data: navigation } = await useAsyncData('navigation', () => fetchContentNavigation())
 const { data: files } = useLazyFetch('/api/search.json', {
   default: () => [],
