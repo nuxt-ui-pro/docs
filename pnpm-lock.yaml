@@ -22,7 +22,10 @@ devDependencies:
     version: 0.2.0(eslint@8.51.0)
   '@nuxt/ui-pro':
     specifier: npm:@nuxt/ui-pro-edge@latest
-    version: /@nuxt/ui-pro-edge@0.2.1-28285317.2e3bef3(vue@3.3.4)(webpack@5.88.2)
+    version: /@nuxt/ui-pro-edge@0.2.1-28285496.298dd43(vue@3.3.4)(webpack@5.88.2)
+  '@nuxthq/studio':
+    specifier: ^1.0.1
+    version: 1.0.1
   eslint:
     specifier: ^8.51.0
     version: 8.51.0
@@ -1026,6 +1029,7 @@ packages:
   /@koa/router@9.4.0:
     resolution: {integrity: sha512-dOOXgzqaDoHu5qqMEPLKEgLz5CeIA7q8+1W62mCvFVCOqeC71UoTGJ4u1xUSOpIl2J1x2pqrNULkFteUeZW3/A==}
     engines: {node: '>= 8.0.0'}
+    deprecated: '**IMPORTANT 10x+ PERFORMANCE UPGRADE**: Please upgrade to v12.0.1+ as we have fixed an issue with debuglog causing 10x slower router benchmark performance, see https://github.com/koajs/router/pull/173'
     dependencies:
       debug: 4.3.4
       http-errors: 1.8.1
@@ -1461,8 +1465,8 @@ packages:
       - webpack
     dev: true
 
-  /@nuxt/ui-pro-edge@0.2.1-28285317.2e3bef3(vue@3.3.4)(webpack@5.88.2):
-    resolution: {integrity: sha512-0xjbzp6daL9yKmETGQ9Q+xUeLrtZCjDWvrbzMUlbtaorPDaMm1cajXk3LK5EGxRMYvG8kBO3fJLw6+9XfzqW3A==}
+  /@nuxt/ui-pro-edge@0.2.1-28285496.298dd43(vue@3.3.4)(webpack@5.88.2):
+    resolution: {integrity: sha512-Is01xCCnYsW9w0rcPwviCRfEHnVrXIp05YiF8/TPUrbcShnnNk2ZQm5Cly2O/sXgyBhmYvUNoVyv4rAOiK78yw==}
     dependencies:
       '@nuxt/ui': /@nuxt/ui-edge@2.9.0-28285290.0bd12fd(vue@3.3.4)(webpack@5.88.2)
       '@vueuse/core': 10.5.0(vue@3.3.4)
@@ -1555,6 +1559,22 @@ packages:
       - vls
       - vti
       - vue-tsc
+    dev: true
+
+  /@nuxthq/studio@1.0.1:
+    resolution: {integrity: sha512-7geTulbJ2ZEhgtoBHZDxbWrorNT7nZiAwXOoGtjciCrsnJhuQiHiQDq/007yvvvz5tN/sDZBaxn8glct6pFzgg==}
+    dependencies:
+      '@nuxt/kit': 3.7.4
+      defu: 6.1.2
+      nuxt-component-meta: 0.5.4
+      nuxt-config-schema: 0.4.6
+      socket.io-client: 4.7.2
+      ufo: 1.3.1
+    transitivePeerDependencies:
+      - bufferutil
+      - rollup
+      - supports-color
+      - utf-8-validate
     dev: true
 
   /@nuxtjs/color-mode@3.3.0:
@@ -7158,6 +7178,31 @@ packages:
       fsevents: 2.3.3
     dev: true
 
+  /nuxt-component-meta@0.5.4:
+    resolution: {integrity: sha512-0ou1O5Dky/avUAm6XrO4r4aZiRgP3wCwBlOe49FcyVZo0uAULFw8b3j48BvKWzBdOywf8hJEL4V5o7FWnd1E+A==}
+    dependencies:
+      '@nuxt/kit': 3.7.4
+      scule: 1.0.0
+      typescript: 5.2.2
+      vue-component-meta: 1.8.19(typescript@5.2.2)
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+    dev: true
+
+  /nuxt-config-schema@0.4.6:
+    resolution: {integrity: sha512-kHLWJFynj5QrxVZ1MjY2xmDaTSN1BCMLGExA+hMMLoCb3wn9TJlDVqnE/nSdUJPMRkNn/NQ5WP9NLA9vlAXRUw==}
+    dependencies:
+      '@nuxt/kit': 3.7.4
+      defu: 6.1.2
+      jiti: 1.20.0
+      pathe: 1.1.1
+      untyped: 1.4.0
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+    dev: true
+
   /nuxt-icon@0.5.0(vue@3.3.4):
     resolution: {integrity: sha512-ND4yh8kW4VyIbORP3cWjgVrOAvy6QSDFDTJltakdqmxVfVysNIs/bx2NzlkHeR1EOS8E/jVcemfTPmRsJ7WUVw==}
     dependencies:
@@ -9363,6 +9408,10 @@ packages:
       mime-types: 2.1.35
     dev: true
 
+  /typesafe-path@0.2.2:
+    resolution: {integrity: sha512-OJabfkAg1WLZSqJAJ0Z6Sdt3utnbzr/jh+NAHoyWHJe8CMSy79Gm085094M9nvTPy22KzTVn5Zq5mbapCI/hPA==}
+    dev: true
+
   /typescript@5.2.2:
     resolution: {integrity: sha512-mI4WrpHsbCIcwT9cF4FZvr80QUeKvsUsUvKDoR+X/7XHQH98xYD8YHZg7ANtz2GtZt/CBq2QJ0thkGJMHfqc1w==}
     engines: {node: '>=14.17'}
@@ -9995,6 +10044,25 @@ packages:
     resolution: {integrity: sha512-oYATTQyh8XVkUWe2kaKxhxKVuuzK2Qcehe+yr3bGiaQAhK3ry2kYE4FWOfL+KO3hVFwCdLmzDQTzYhTi9C+R2A==}
     dependencies:
       ufo: 1.3.1
+    dev: true
+
+  /vue-component-meta@1.8.19(typescript@5.2.2):
+    resolution: {integrity: sha512-lwhcYgEaJHox+j8fQs2npMm9qu0gG8aLBx/K+3ewBxxWVVcofIajd9wcwcMGFggUiNkRz4R0jk3ir6NlFX/PrA==}
+    peerDependencies:
+      typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+    dependencies:
+      '@volar/typescript': 1.10.4
+      '@vue/language-core': 1.8.19(typescript@5.2.2)
+      typesafe-path: 0.2.2
+      typescript: 5.2.2
+      vue-component-type-helpers: 1.8.19
+    dev: true
+
+  /vue-component-type-helpers@1.8.19:
+    resolution: {integrity: sha512-1OANGSZK4pzHF4uc86usWi+o5Y0zgoDtqWkPg6Am6ot+jHSAmpOah59V/4N82So5xRgivgCxGgK09lBy1XNUfQ==}
     dev: true
 
   /vue-demi@0.14.6(vue@3.3.4):
