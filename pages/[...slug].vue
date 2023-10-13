@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ParsedContent } from '@nuxt/content/dist/runtime/types'
+import type { NavItem, ParsedContent } from '@nuxt/content/dist/runtime/types'
 import { withoutTrailingSlash } from 'ufo'
 
 const route = useRoute()
@@ -8,6 +8,8 @@ const page = inject<Ref<ParsedContent>>('page')
 if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
 }
+
+const navigation = inject<Ref<NavItem[]>>('navigation')
 
 const { data: surround } = await useAsyncData(`${route.path}-surround`, () => queryContent()
   .where({ _extension: 'md', navigation: { $ne: false } })
@@ -51,26 +53,34 @@ const communityLinks = computed(() => [{
 
 <template>
   <UPage>
-    <UPageHeader :title="page.title" :description="page.description" :links="page.links" :headline="headline" />
-
-    <UPageBody prose>
-      <ContentRenderer v-if="page.body" :value="page" />
-
-      <hr v-if="surround?.length">
-
-      <UDocsSurround :surround="(surround as ParsedContent[])" />
-    </UPageBody>
-
-    <template v-if="page.body?.toc?.links?.length" #right>
-      <UDocsToc :links="page.body.toc.links">
-        <template #bottom>
-          <div class="hidden lg:block space-y-6 !mt-6">
-            <UDivider v-if="page.body?.toc?.links?.length" type="dashed" />
-
-            <UPageLinks title="Community" :links="communityLinks" />
-          </div>
-        </template>
-      </UDocsToc>
+    <template #left>
+      <UAside>
+        <UNavigationTree :links="mapContentNavigation(navigation)" />
+      </UAside>
     </template>
+
+    <UPage>
+      <UPageHeader :title="page.title" :description="page.description" :links="page.links" :headline="headline" />
+
+      <UPageBody prose>
+        <ContentRenderer v-if="page.body" :value="page" />
+
+        <hr v-if="surround?.length">
+
+        <UDocsSurround :surround="(surround as ParsedContent[])" />
+      </UPageBody>
+
+      <template v-if="page.body?.toc?.links?.length" #right>
+        <UDocsToc :links="page.body.toc.links">
+          <template #bottom>
+            <div class="hidden lg:block space-y-6 !mt-6">
+              <UDivider v-if="page.body?.toc?.links?.length" type="dashed" />
+
+              <UPageLinks title="Community" :links="communityLinks" />
+            </div>
+          </template>
+        </UDocsToc>
+      </template>
+    </UPage>
   </UPage>
 </template>

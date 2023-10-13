@@ -21,6 +21,7 @@ const { data: files } = useLazyFetch<ParsedContent[]>('/api/search.json', {
 })
 const { data: page } = await useAsyncData(() => queryContent(route.path).findOne(), { watch: [() => route.path] })
 
+provide('navigation', navigation)
 provide('page', page)
 </script>
 
@@ -29,24 +30,8 @@ provide('page', page)
     <Header />
 
     <UMain>
-      <ULandingHero v-if="page?.hero" v-bind="page.hero" class="hidden lg:block">
-        <template #title>
-          <MDC :value="page.hero.title" :tag="false" />
-        </template>
-
-        <MDC v-if="page.hero.code" :value="page.hero.code" tag="pre" class="prose prose-primary dark:prose-invert max-w-none" />
-      </ULandingHero>
-
       <UContainer>
-        <UPage>
-          <template #left>
-            <UAside>
-              <UNavigationTree :links="mapContentNavigation(navigation)" />
-            </UAside>
-          </template>
-
-          <NuxtPage />
-        </UPage>
+        <NuxtPage />
       </UContainer>
     </UMain>
 

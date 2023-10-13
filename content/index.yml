@@ -1,0 +1,36 @@
+title: 'Nuxt UI Pro Docs'
+description: 'Welcome to Nuxt UI Pro documentation template.'
+navigation: false
+hero:
+  title: '[Nuxt UI Pro]{.text-primary} :br Docs template'
+  description: 'Create your documentation in seconds with this template!'
+  orientation: horizontal
+  links:
+    - label: 'Get started'
+      icon: 'i-heroicons-rocket-launch'
+      to: '/getting-started/introduction'
+      size: lg
+    - label: 'Documentation'
+      icon: 'i-simple-icons-nuxtdotjs'
+      color: 'white'
+      to: 'https://ui.nuxt.com/pro'
+      target: '_blank'
+      size: lg
+  code: |
+    ```vue [app.vue]
+    <template>
+      <UMain>
+        <UContainer>
+          <UPage>
+            <template #left>
+              <UAside>
+                <UNavigationTree :links="links" />
+              </UAside>
+            </template>
+
+            <NuxtPage />
+          </UPage>
+        </UContainer>
+      </UMain>
+    </template>
+    ```
