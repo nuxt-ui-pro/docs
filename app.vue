@@ -12,17 +12,13 @@ useHead({
   }
 })
 
-const route = useRoute()
-
 const { data: navigation } = await useAsyncData('navigation', () => fetchContentNavigation())
 const { data: files } = useLazyFetch<ParsedContent[]>('/api/search.json', {
   default: () => [],
   server: false
 })
-const { data: page } = await useAsyncData(() => queryContent(route.path).findOne(), { watch: [() => route.path] })
 
 provide('navigation', navigation)
-provide('page', page)
 </script>
 
 <template>

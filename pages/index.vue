@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import type { ParsedContent } from '@nuxt/content/dist/runtime/types'
-
-const page = inject<Ref<ParsedContent>>('page')
+const { data: page } = await useAsyncData(() => queryContent('/').findOne())
 
 useSeoMeta({
   titleTemplate: 'Nuxt UI Pro - Docs template',

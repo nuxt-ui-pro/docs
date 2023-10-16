@@ -4,7 +4,7 @@ import { withoutTrailingSlash } from 'ufo'
 
 const route = useRoute()
 
-const page = inject<Ref<ParsedContent>>('page')
+const { data: page } = await useAsyncData(() => queryContent(route.path).findOne())
 if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
 }
