@@ -27,5 +27,11 @@ defineOgImage({
 
       <MDC :value="page.hero.code" tag="pre" class="prose prose-primary dark:prose-invert max-w-none" />
     </ULandingHero>
+
+    <ULandingSection v-for="(section, index) of page.sections" :key="index" v-bind="section">
+      <UPageGrid>
+        <ULandingCard v-for="(item, index2) of section.items" :key="index2" v-bind="item" />
+      </UPageGrid>
+    </ULandingSection>
   </UPage>
 </template>

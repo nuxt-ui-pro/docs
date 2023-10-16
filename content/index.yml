@@ -34,3 +34,16 @@ hero:
       </UMain>
     </template>
     ```
+sections:
+  - title: 'All-in-one docs template'
+    description: 'Ad enim labore tempor ipsum est!'
+    items:
+      - title: 'Nuxt 3'
+        description: 'Powered by Nuxt 3'
+        icon: 'i-simple-icons-nuxtdotjs'
+      - title: 'Markdown'
+        description: 'Write pages in Markdown with Nuxt Content'
+        icon: 'i-simple-icons-markdown'
+      - title: 'Sidebar'
+        description: 'Multi-level auto-generated sidebar navigation'
+        icon: 'i-heroicons-list-bullet'
