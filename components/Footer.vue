@@ -1,5 +1,12 @@
 <template>
   <UFooter>
+    <template #left>
+      <span class="text-sm text-gray-500 dark:text-gray-400">
+        Published under
+        <NuxtLink href="https://github.com/nuxt/ui" target="_blank" class="text-gray-900 dark:text-white">MIT License</NuxtLink>
+      </span>
+    </template>
+
     <template #right>
       <UButton
         aria-label="Nuxt UI Pro Docs on GitHub"
