@@ -4,9 +4,9 @@ import type { ParsedContent } from '@nuxt/content/dist/runtime/types'
 const page = inject<Ref<ParsedContent>>('page')
 
 useSeoMeta({
-  titleTemplate: '%s - Nuxt UI Pro - Docs template',
+  titleTemplate: 'Nuxt UI Pro - Docs template',
   title: page.value.title,
-  ogTitle: `${page.value.title} - Nuxt UI Pro - Docs template`,
+  ogTitle: 'Nuxt UI Pro - Docs template',
   description: page.value.description,
   ogDescription: page.value.description
 })
