@@ -29,7 +29,7 @@ provide('navigation', navigation)
 </script>
 
 <template>
-  <Header />
+  <AppHeader />
 
   <UContainer>
     <UMain>
@@ -39,7 +39,7 @@ provide('navigation', navigation)
     </UMain>
   </UContainer>
 
-  <UFooter />
+  <AppFooter />
 
   <ClientOnly>
     <LazyUDocsSearch :files="files" :navigation="navigation" />

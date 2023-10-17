@@ -25,7 +25,7 @@ provide('navigation', navigation)
   <div>
     <span v-if="$route.path === '/'" class="gradient" />
 
-    <Header />
+    <AppHeader />
 
     <UMain>
       <UContainer>
@@ -33,12 +33,10 @@ provide('navigation', navigation)
       </UContainer>
     </UMain>
 
-    <Footer />
+    <AppFooter />
 
     <ClientOnly>
       <LazyUDocsSearch :files="files" :navigation="navigation" />
-
-      <UNotifications />
     </ClientOnly>
   </div>
 </template>
