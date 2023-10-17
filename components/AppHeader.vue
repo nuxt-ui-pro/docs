@@ -19,6 +19,14 @@ const navigation = inject<NavItem[]>('navigation', [])
     <template #right>
       <UDocsSearchButton label="" class="lg:hidden" />
       <UButton
+        aria-label="Nuxt UI docs"
+        to="https://ui.nuxt.com/getting-started"
+        icon="i-heroicons-book-open"
+        target="_blank"
+        color="gray"
+        variant="ghost"
+      />
+      <UButton
         aria-label="Docs template on GitHub"
         to="https://github.com/nuxt-ui-pro/docs"
         icon="i-simple-icons-github"
