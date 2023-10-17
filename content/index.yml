@@ -8,7 +8,7 @@ hero:
   links:
     - label: 'Get started'
       icon: 'i-heroicons-rocket-launch'
-      to: '/getting-started/introduction'
+      to: '/getting-started'
       size: lg
     - label: 'Documentation'
       icon: 'i-simple-icons-nuxtdotjs'
