@@ -36,14 +36,16 @@ hero:
     ```
 sections:
   - title: 'All-in-one docs template'
-    description: 'Ad enim labore tempor ipsum est!'
     items:
       - title: 'Nuxt 3'
-        description: 'Powered by Nuxt 3'
+        description: 'Powered by Nuxt 3 for optimal performances and SEO.'
         icon: 'i-simple-icons-nuxtdotjs'
       - title: 'Markdown'
-        description: 'Write pages in Markdown with Nuxt Content'
+        description: 'Write your pages Markdown content with Nuxt Content.'
         icon: 'i-simple-icons-markdown'
       - title: 'Sidebar'
-        description: 'Multi-level auto-generated sidebar navigation'
+        description: 'Multi-level auto-generated sidebar navigation based on your content folder.'
         icon: 'i-heroicons-list-bullet'
+      - title: 'Search'
+        description: 'A full-text search modal empowered by Fuse.js.'
+        icon: 'i-heroicons-magnifying-glass-20-solid'
