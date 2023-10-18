@@ -3,8 +3,8 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   extends: process.env.NUXT_UI_PRO_PATH || '@nuxt/ui-pro',
   modules: [
-    '@nuxt/ui',
     '@nuxt/content',
+    '@nuxt/ui',
     'nuxt-og-image'
   ],
   ui: {
