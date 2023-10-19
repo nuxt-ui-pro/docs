@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const { footer } = useAppConfig()
+</script>
+
 <template>
   <UFooter>
     <template #left>
@@ -8,22 +12,15 @@
     </template>
 
     <template #right>
-      <UButton
-        aria-label="Nuxt UI Pro Docs on GitHub"
-        to="https://github.com/nuxt-ui-pro/docs"
-        icon="i-simple-icons-github"
-        target="_blank"
-        color="gray"
-        variant="ghost"
-      />
-      <UButton
-        aria-label="Nuxt on X"
-        to="https://x.com/nuxt_js"
-        icon="i-simple-icons-x"
-        target="_blank"
-        color="gray"
-        variant="ghost"
-      />
+      <template v-if="footer?.links">
+        <UButton
+          v-for="(link, index) of footer.links"
+          :key="index"
+          v-bind="link"
+          color="gray"
+          variant="ghost"
+        />
+      </template>
       <UColorModeButton />
     </template>
   </UFooter>

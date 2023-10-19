@@ -2,6 +2,8 @@
 import type { NavItem } from '@nuxt/content/dist/runtime/types'
 
 const navigation = inject<NavItem[]>('navigation', [])
+
+const { header } = useAppConfig()
 </script>
 
 <template>
@@ -18,22 +20,15 @@ const navigation = inject<NavItem[]>('navigation', [])
 
     <template #right>
       <UDocsSearchButton label="" class="lg:hidden" />
-      <UButton
-        aria-label="Nuxt UI docs"
-        to="https://ui.nuxt.com/getting-started"
-        icon="i-heroicons-book-open"
-        target="_blank"
-        color="gray"
-        variant="ghost"
-      />
-      <UButton
-        aria-label="Docs template on GitHub"
-        to="https://github.com/nuxt-ui-pro/docs"
-        icon="i-simple-icons-github"
-        target="_blank"
-        color="gray"
-        variant="ghost"
-      />
+      <template v-if="header?.links">
+        <UButton
+          v-for="(link, index) of header.links"
+          :key="index"
+          v-bind="link"
+          color="gray"
+          variant="ghost"
+        />
+      </template>
     </template>
 
     <template #panel>
