@@ -1,5 +1,7 @@
 <script setup lang="ts">
 const { footer } = useAppConfig()
+
+const links = computed(() =>  Object.entries(footer?.links || {}).map(([key, value]) => ({ key, ...value })))
 </script>
 
 <template>
@@ -12,16 +14,14 @@ const { footer } = useAppConfig()
     </template>
 
     <template #right>
-      <template v-if="footer?.links">
-        <UButton
-          v-for="(link, index) of footer.links"
-          :key="index"
-          v-bind="link"
-          color="gray"
-          variant="ghost"
-        />
-      </template>
-      <UColorModeButton />
+      <UButton
+        v-for="link of links"
+        :key="link.key"
+        v-bind="link"
+        color="gray"
+        variant="ghost"
+      />
+      <UColorModeButton v-if="footer.colorMode" />
     </template>
   </UFooter>
 </template>

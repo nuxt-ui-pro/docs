@@ -4,6 +4,8 @@ import type { NavItem } from '@nuxt/content/dist/runtime/types'
 const navigation = inject<NavItem[]>('navigation', [])
 
 const { header } = useAppConfig()
+
+const links = computed(() =>  Object.entries(header?.links || {}).map(([key, value]) => ({ key, ...value })))
 </script>
 
 <template>
@@ -20,15 +22,14 @@ const { header } = useAppConfig()
 
     <template #right>
       <UDocsSearchButton label="" class="lg:hidden" />
-      <template v-if="header?.links">
-        <UButton
-          v-for="(link, index) of header.links"
-          :key="index"
-          v-bind="link"
-          color="gray"
-          variant="ghost"
-        />
-      </template>
+      <UButton
+        v-for="link of links"
+        :key="link.key"
+        v-bind="link"
+        color="gray"
+        variant="ghost"
+      />
+      <UColorModeButton v-if="header.colorMode" />
     </template>
 
     <template #panel>
