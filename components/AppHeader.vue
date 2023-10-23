@@ -13,7 +13,7 @@ const links = computed(() =>  Object.entries(header?.links || {}).map(([key, val
     <template #logo>
       <Logo class="hidden sm:block h-5 w-auto self-center" />
       <LogoOnly class="sm:hidden h-5 w-auto self-center" />
-      <span class="block leading-tight sm:pt-1 self-center">&bull; Docs template</span>
+      <LogoBadge>Docs template</LogoBadge>
     </template>
 
     <template #center>
