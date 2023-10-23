@@ -2,7 +2,7 @@
   <span class="relative px-1 py-0.5 rounded border border-primary text-xs font-medium text-primary self-center overflow-hidden">
     <slot />
 
-    <div class="absolute w-full h-full inset-0 gradient" />
+    <div class="opacity-25 dark:opacity-100 absolute w-full h-full inset-0 gradient" />
   </span>
 </template>
 
