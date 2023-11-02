@@ -9,17 +9,25 @@ const { header } = useAppConfig()
 <template>
   <UHeader>
     <template #logo>
-      <Logo class="hidden sm:block h-5 w-auto self-center" />
-      <LogoOnly class="sm:hidden h-5 w-auto self-center" />
-      <LogoBadge>Docs template</LogoBadge>
+      <template v-if="header?.logo?.path">
+        <img
+          :src="header.logo.path"
+          :alt="header.logo.alt"
+        >
+      </template>
+      <template v-else>
+        <Logo class="hidden sm:block h-5 w-auto self-center" />
+        <LogoOnly class="sm:hidden h-5 w-auto self-center" />
+        <LogoBadge>Docs template</LogoBadge>
+      </template>
     </template>
 
-    <template #center>
+    <template v-if="header?.search" #center>
       <UDocsSearchButton class="hidden lg:flex" />
     </template>
 
     <template #right>
-      <UDocsSearchButton label="" class="lg:hidden" />
+      <UDocsSearchButton v-if="header?.search" label="" class="lg:hidden" />
       <template v-if="header?.links">
         <UButton
           v-for="(link, index) of header.links"

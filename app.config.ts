@@ -4,6 +4,11 @@ export default defineAppConfig({
     gray: 'slate',
   },
   header: {
+    logo: {
+      path: '',
+      alt: ''
+    },
+    search: true,
     links: [{
       icon: 'i-heroicons-book-open',
       to: 'https://ui.nuxt.com/getting-started',
@@ -17,6 +22,8 @@ export default defineAppConfig({
     }]
   },
   footer: {
+    credits: '',
+    colorMode: true,
     links: [{
       icon: 'i-simple-icons-github',
       to: 'https://github.com/nuxt-ui-pro/docs',
