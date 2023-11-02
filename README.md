@@ -2,6 +2,8 @@
 
 Look at [Nuxt docs](https://nuxt.com/docs/getting-started/introduction) and [Nuxt UI Pro docs](https://ui.nuxt.com/pro) to learn more.
 
+Clone and play on [Nuxt Studio](https://nuxt.studio/themes/docs).
+
 ## Setup
 
 Make sure to install the dependencies:
