@@ -3,60 +3,60 @@ import { field, group } from '@nuxthq/studio/theme'
 export default defineNuxtSchema({
   appConfig: {
     ui: group({
-        title: 'UI',
-        description: 'UI Customization.',
-        icon: 'i-mdi-palette-outline',
-        fields: {
-          icons: group({
-            title: 'Icons',
-            description: 'Manage icons used in UI Pro.',
-            icon: 'i-mdi-application-settings-outline',
-            fields: {
-              search: field({
-                type: 'icon',
-                title: 'Search Bar',
-                description: 'Icon to display in the search bar.',
-                icon: 'i-heroicons-magnifying-glass-20-solid',
-                default: 'i-heroicons-magnifying-glass-20-solid'
-              }),
-              dark: field({
-                type: 'icon',
-                title: 'Dark mode',
-                description: 'Icon of color mode button for dark mode.',
-                icon: 'i-heroicons-moon-20-solid',
-                default: 'i-heroicons-moon-20-solid'
-              }),
-              light: field({
-                type: 'icon',
-                title: 'Light mode',
-                description: 'Icon of color mode button for light mode.',
-                icon: 'i-heroicons-sun-20-solid',
-                default: 'i-heroicons-sun-20-solid'
-              }),
-              external: field({
-                type: 'icon',
-                title: 'External Link',
-                description: 'Icon for external link.',
-                icon: 'i-heroicons-arrow-up-right-20-solid',
-                default: 'i-heroicons-arrow-up-right-20-solid'
-              }),
-              chevron: field({
-                type: 'icon',
-                title: 'Chevron',
-                description: 'Icon for chevron.',
-                icon: 'i-heroicons-chevron-down-20-solid',
-                default: 'i-heroicons-chevron-down-20-solid'
-              }),
-              hash: field({
-                type: 'icon',
-                title: 'Hash',
-                description: 'Icon for hash anchors.',
-                icon: 'i-heroicons-hashtag-20-solid',
-                default: 'i-heroicons-hashtag-20-solid'
-              })
-            }
-          })
-        }
+      title: 'UI',
+      description: 'UI Customization.',
+      icon: 'i-mdi-palette-outline',
+      fields: {
+        icons: group({
+          title: 'Icons',
+          description: 'Manage icons used in UI Pro.',
+          icon: 'i-mdi-application-settings-outline',
+          fields: {
+            search: field({
+              type: 'icon',
+              title: 'Search Bar',
+              description: 'Icon to display in the search bar.',
+              icon: 'i-heroicons-magnifying-glass-20-solid',
+              default: 'i-heroicons-magnifying-glass-20-solid'
+            }),
+            dark: field({
+              type: 'icon',
+              title: 'Dark mode',
+              description: 'Icon of color mode button for dark mode.',
+              icon: 'i-heroicons-moon-20-solid',
+              default: 'i-heroicons-moon-20-solid'
+            }),
+            light: field({
+              type: 'icon',
+              title: 'Light mode',
+              description: 'Icon of color mode button for light mode.',
+              icon: 'i-heroicons-sun-20-solid',
+              default: 'i-heroicons-sun-20-solid'
+            }),
+            external: field({
+              type: 'icon',
+              title: 'External Link',
+              description: 'Icon for external link.',
+              icon: 'i-heroicons-arrow-up-right-20-solid',
+              default: 'i-heroicons-arrow-up-right-20-solid'
+            }),
+            chevron: field({
+              type: 'icon',
+              title: 'Chevron',
+              description: 'Icon for chevron.',
+              icon: 'i-heroicons-chevron-down-20-solid',
+              default: 'i-heroicons-chevron-down-20-solid'
+            }),
+            hash: field({
+              type: 'icon',
+              title: 'Hash',
+              description: 'Icon for hash anchors.',
+              icon: 'i-heroicons-hashtag-20-solid',
+              default: 'i-heroicons-hashtag-20-solid'
+            })
+          }
+        })
+      }
     }),
     header: group({
       title: 'Header',
@@ -92,11 +92,11 @@ export default defineNuxtSchema({
           default: true
         }),
         colorMode: field({
-            type: 'boolean',
-            title: 'Color Mode',
-            description: 'Hide or display the color mode button in your header.',
-            icon: 'i-mdi-moon-waning-crescent',
-            default: true
+          type: 'boolean',
+          title: 'Color Mode',
+          description: 'Hide or display the color mode button in your header.',
+          icon: 'i-mdi-moon-waning-crescent',
+          default: true
         }),
         links: field({
           type: 'array',
