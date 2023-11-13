@@ -1,20 +1,21 @@
 export default defineAppConfig({
   ui: {
-    primary: 'emerald',
+    primary: 'green',
     gray: 'slate',
+    footer: {
+      bottom: {
+        left: 'text-sm text-gray-500 dark:text-gray-400',
+        wrapper: 'border-t border-gray-200 dark:border-gray-800'
+      }
+    }
   },
   header: {
     logo: {
-      path: '',
-      alt: ''
+      src: ''
     },
     search: true,
+    colorMode: true,
     links: [{
-      icon: 'i-heroicons-book-open',
-      to: 'https://ui.nuxt.com/getting-started',
-      target: '_blank',
-      'aria-label': 'Nuxt UI docs'
-    }, {
       icon: 'i-simple-icons-github',
       to: 'https://github.com/nuxt-ui-pro/docs',
       target: '_blank',
@@ -22,18 +23,28 @@ export default defineAppConfig({
     }]
   },
   footer: {
-    credits: '',
-    colorMode: true,
+    credits: 'Copyright © 2023',
+    colorMode: false,
     links: [{
-      icon: 'i-simple-icons-github',
-      to: 'https://github.com/nuxt-ui-pro/docs',
+      icon: 'i-simple-icons-nuxtdotjs',
+      to: 'https://nuxt.com',
       target: '_blank',
-      'aria-label': 'Nuxt UI Pro Docs on GitHub'
+      'aria-label': 'Nuxt Website'
+    }, {
+      icon: 'i-simple-icons-discord',
+      to: 'https://discord.com/invite/ps2h6QT',
+      target: '_blank',
+      'aria-label': 'Nuxt UI on Discord'
     }, {
       icon: 'i-simple-icons-x',
       to: 'https://x.com/nuxt_js',
       target: '_blank',
       'aria-label': 'Nuxt on X'
+    }, {
+      icon: 'i-simple-icons-github',
+      to: 'https://github.com/nuxt/ui',
+      target: '_blank',
+      'aria-label': 'Nuxt UI on GitHub'
     }]
   }
 })

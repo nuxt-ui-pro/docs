@@ -5,15 +5,12 @@ const { footer } = useAppConfig()
 <template>
   <UFooter>
     <template #left>
-      <span v-if="footer?.credits" class="text-sm text-gray-500 dark:text-gray-400">
-        {{ footer.credits }}
-      </span>
-      <span v-else class="text-sm text-gray-500 dark:text-gray-400">
-        Nuxt UI Pro © {{ new Date().getFullYear() }}
-      </span>
+      {{ footer.credits }}
     </template>
 
     <template #right>
+      <UColorModeButton v-if="footer?.colorMode" />
+
       <template v-if="footer?.links">
         <UButton
           v-for="(link, index) of footer?.links"
@@ -21,7 +18,6 @@ const { footer } = useAppConfig()
           v-bind="{ color: 'gray', variant: 'ghost', ...link }"
         />
       </template>
-      <UColorModeButton v-if="footer?.colorMode" />
     </template>
   </UFooter>
 </template>

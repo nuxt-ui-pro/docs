@@ -17,9 +17,7 @@ useHead({
   }
 })
 
-const { data: navigation } = await useAsyncData('navigation', () => fetchContentNavigation(), {
-  default: () => []
-})
+const { data: navigation } = await useAsyncData('navigation', () => fetchContentNavigation())
 const { data: files } = useLazyFetch<ParsedContent[]>('/api/search.json', {
   default: () => [],
   server: false,
@@ -29,19 +27,23 @@ provide('navigation', navigation)
 </script>
 
 <template>
-  <AppHeader />
+  <div>
+    <Header />
 
-  <UContainer>
     <UMain>
-      <UPage>
-        <UPageError :error="error" />
-      </UPage>
+      <UContainer>
+        <UPage>
+          <UPageError :error="error" />
+        </UPage>
+      </UContainer>
     </UMain>
-  </UContainer>
 
-  <AppFooter />
+    <Footer />
 
-  <ClientOnly>
-    <LazyUDocsSearch :files="files" :navigation="navigation" />
-  </ClientOnly>
+    <ClientOnly>
+      <LazyUDocsSearch :files="files" :navigation="navigation" />
+    </ClientOnly>
+
+    <UNotifications />
+  </div>
 </template>
