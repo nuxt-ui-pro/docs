@@ -9,24 +9,28 @@ const { header } = useAppConfig()
 <template>
   <UHeader>
     <template #logo>
-      <Logo class="hidden sm:block h-5 w-auto self-center" />
-      <LogoOnly class="sm:hidden h-5 w-auto self-center" />
-      <LogoBadge>Docs template</LogoBadge>
+      <template v-if="header?.logo?.src">
+        <img v-bind="{ class: 'h-6 w-auto', ...header.logo }">
+      </template>
+      <template v-else>
+        Nuxt UI Pro <UBadge label="Docs" variant="subtle" class="mb-0.5" />
+      </template>
     </template>
 
-    <template #center>
+    <template v-if="header?.search" #center>
       <UDocsSearchButton class="hidden lg:flex" />
     </template>
 
     <template #right>
-      <UDocsSearchButton label="" class="lg:hidden" />
+      <UDocsSearchButton v-if="header?.search" :label="null" class="lg:hidden" />
+
+      <UColorModeButton v-if="header?.colorMode" />
+
       <template v-if="header?.links">
         <UButton
           v-for="(link, index) of header.links"
           :key="index"
-          v-bind="link"
-          color="gray"
-          variant="ghost"
+          v-bind="{ color: 'gray', variant: 'ghost', ...link }"
         />
       </template>
     </template>

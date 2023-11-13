@@ -1,6 +1,9 @@
 <script setup lang="ts">
-import type { NavItem, ParsedContent } from '@nuxt/content/dist/runtime/types'
 import { withoutTrailingSlash } from 'ufo'
+
+definePageMeta({
+  layout: 'docs'
+})
 
 const route = useRoute()
 
@@ -8,8 +11,6 @@ const { data: page } = await useAsyncData(route.path, () => queryContent(route.p
 if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
 }
-
-const navigation = inject<Ref<NavItem[]>>('navigation')
 
 const { data: surround } = await useAsyncData(`${route.path}-surround`, () => queryContent()
   .where({ _extension: 'md', navigation: { $ne: false } })
@@ -44,8 +45,13 @@ const communityLinks = computed(() => [{
   to: 'https://github.com/nuxt/ui',
   target: '_blank',
 }, {
+  icon: 'i-heroicons-book-open',
+  label: 'Nuxt UI Pro docs',
+  to: 'https://ui.nuxt.com/pro/guide',
+  target: '_blank',
+}, {
   icon: 'i-simple-icons-nuxtdotjs',
-  label: 'Purchase UI Pro',
+  label: 'Purchase a license',
   to: 'https://ui.nuxt.com/pro/purchase',
   target: '_blank',
 }])
@@ -53,34 +59,26 @@ const communityLinks = computed(() => [{
 
 <template>
   <UPage>
-    <template #left>
-      <UAside>
-        <UNavigationTree :links="mapContentNavigation(navigation)" />
-      </UAside>
+    <UPageHeader :title="page.title" :description="page.description" :links="page.links" :headline="headline" />
+
+    <UPageBody prose>
+      <ContentRenderer v-if="page.body" :value="page" />
+
+      <hr v-if="surround?.length">
+
+      <UDocsSurround :surround="surround" />
+    </UPageBody>
+
+    <template v-if="page.toc !== false" #right>
+      <UDocsToc :links="page.body?.toc?.links">
+        <template #bottom>
+          <div class="hidden lg:block space-y-6" :class="{ '!mt-6': page.body?.toc?.links?.length }">
+            <UDivider v-if="page.body?.toc?.links?.length" type="dashed" />
+
+            <UPageLinks title="Community" :links="communityLinks" />
+          </div>
+        </template>
+      </UDocsToc>
     </template>
-
-    <UPage>
-      <UPageHeader :title="page.title" :description="page.description" :links="page.links" :headline="headline" />
-
-      <UPageBody prose>
-        <ContentRenderer v-if="page.body" :value="page" />
-
-        <hr v-if="surround?.length">
-
-        <UDocsSurround :surround="(surround as ParsedContent[])" />
-      </UPageBody>
-
-      <template v-if="page.body?.toc?.links?.length" #right>
-        <UDocsToc :links="page.body.toc.links">
-          <template #bottom>
-            <div class="hidden lg:block space-y-6 !mt-6">
-              <UDivider v-if="page.body?.toc?.links?.length" type="dashed" />
-
-              <UPageLinks title="Community" :links="communityLinks" />
-            </div>
-          </template>
-        </UDocsToc>
-      </template>
-    </UPage>
   </UPage>
 </template>
