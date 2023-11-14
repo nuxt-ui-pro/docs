@@ -68,20 +68,48 @@ export default defineNuxtSchema({
           description: 'Footer logo configuration.',
           icon: 'i-mdi-image-filter-center-focus-strong-outline',
           fields: {
-            src: field({
-              type: 'media',
-              title: 'Logo',
-              description: 'Pick an image from your gallery.',
-              icon: 'i-mdi-image',
-              default: ''
+            dark: group({
+              title: 'Dark',
+              description: 'Dark Mode Logo.',
+              icon: 'i-heroicons-moon-20-solid',
+              fields: {
+                src: field({
+                  type: 'media',
+                  title: 'Logo',
+                  description: 'Pick an image from your gallery.',
+                  icon: 'i-mdi-image',
+                  default: ''
+                }),
+                alt: field({
+                  type: 'string',
+                  title: 'Alt',
+                  description: 'Alt to display for accessibility.',
+                  icon: 'i-mdi-alphabet-latin',
+                  default: ''
+                })
+              }
             }),
-            alt: field({
-              type: 'string',
-              title: 'Alt',
-              description: 'Alt to display for accessibility.',
-              icon: 'i-mdi-alphabet-latin',
-              default: ''
-            })
+            light: group({
+              title: 'Light',
+              description: 'Light Mode Logo.',
+              icon: 'i-heroicons-sun-20-solid',
+              fields: {
+                src: field({
+                  type: 'media',
+                  title: 'Logo',
+                  description: 'Pick an image from your gallery.',
+                  icon: 'i-mdi-image',
+                  default: ''
+                }),
+                alt: field({
+                  type: 'string',
+                  title: 'Alt',
+                  description: 'Alt to display for accessibility.',
+                  icon: 'i-mdi-alphabet-latin',
+                  default: ''
+                })
+              }
+            }),
           }
         }),
         search: field({
@@ -95,7 +123,7 @@ export default defineNuxtSchema({
           type: 'boolean',
           title: 'Color Mode',
           description: 'Hide or display the color mode button in your header.',
-          icon: 'i-mdi-moon-waning-crescent',
+          icon: 'i-heroicons-moon-20-solid',
           default: true
         }),
         links: field({
@@ -123,7 +151,7 @@ export default defineNuxtSchema({
           type: 'boolean',
           title: 'Color Mode',
           description: 'Hide or display the color mode button in the footer.',
-          icon: 'i-mdi-moon-waning-crescent',
+          icon: 'i-heroicons-moon-20-solid',
           default: false
         }),
         links: field({

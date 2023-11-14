@@ -11,7 +11,12 @@ export default defineAppConfig({
   },
   header: {
     logo: {
-      src: ''
+      light: {
+        src: ''
+      },
+      dark: {
+        src: ''
+      }
     },
     search: true,
     colorMode: true,
