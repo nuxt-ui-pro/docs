@@ -1,3 +1,5 @@
+![nuxt-ui-pro-docs-template](https://github.com/nuxt-ui-pro/docs/assets/904724/67fc15a7-92f6-4566-95b9-fe099012473c)
+
 # Nuxt UI Pro - Docs template
 
 Look at [Nuxt docs](https://nuxt.com/docs/getting-started/introduction) and [Nuxt UI Pro docs](https://ui.nuxt.com/pro) to learn more.
