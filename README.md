@@ -2,9 +2,12 @@
 
 # Nuxt UI Pro - Docs template
 
-Look at [Nuxt docs](https://nuxt.com/docs/getting-started/introduction) and [Nuxt UI Pro docs](https://ui.nuxt.com/pro) to learn more.
+[![Nuxt UI Pro](https://img.shields.io/badge/Made%20with-Nuxt%20UI%20Pro-00DC82?logo=nuxt.js&labelColor=020420)](https://ui.nuxt.com/pro)
 
-Clone and play on [Nuxt Studio](https://nuxt.studio/themes/docs).
+- [Live demo](https://nuxt-ui-pro-template-docs.vercel.app/)
+- [Play on Stackblitz](https://stackblitz.com/github/nuxt-ui-pro/docs)
+- [Documentation](https://ui.nuxt.com/pro/guide)
+- [Clone on Nuxt Studio](https://nuxt.studio/themes/docs).
 
 ## Setup
 
