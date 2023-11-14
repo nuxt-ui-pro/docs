@@ -68,20 +68,48 @@ export default defineNuxtSchema({
           description: 'Footer logo configuration.',
           icon: 'i-mdi-image-filter-center-focus-strong-outline',
           fields: {
-            src: field({
-              type: 'media',
-              title: 'Logo',
-              description: 'Pick an image from your gallery.',
-              icon: 'i-mdi-image',
-              default: ''
+            dark: group({
+              title: 'Dark',
+              description: 'Dark Mode Logo.',
+              icon: 'i-heroicons-moon-20-solid',
+              fields: {
+                src: field({
+                  type: 'media',
+                  title: 'Logo',
+                  description: 'Pick an image from your gallery.',
+                  icon: 'i-mdi-image',
+                  default: ''
+                }),
+                alt: field({
+                  type: 'string',
+                  title: 'Alt',
+                  description: 'Alt to display for accessibility.',
+                  icon: 'i-mdi-alphabet-latin',
+                  default: ''
+                })
+              }
             }),
-            alt: field({
-              type: 'string',
-              title: 'Alt',
-              description: 'Alt to display for accessibility.',
-              icon: 'i-mdi-alphabet-latin',
-              default: ''
-            })
+            light: group({
+              title: 'Light',
+              description: 'Light Mode Logo.',
+              icon: 'i-heroicons-sun-20-solid',
+              fields: {
+                src: field({
+                  type: 'media',
+                  title: 'Logo',
+                  description: 'Pick an image from your gallery.',
+                  icon: 'i-mdi-image',
+                  default: ''
+                }),
+                alt: field({
+                  type: 'string',
+                  title: 'Alt',
+                  description: 'Alt to display for accessibility.',
+                  icon: 'i-mdi-alphabet-latin',
+                  default: ''
+                })
+              }
+            }),
           }
         }),
         search: field({
@@ -95,7 +123,7 @@ export default defineNuxtSchema({
           type: 'boolean',
           title: 'Color Mode',
           description: 'Hide or display the color mode button in your header.',
-          icon: 'i-mdi-moon-waning-crescent',
+          icon: 'i-heroicons-moon-20-solid',
           default: true
         }),
         links: field({
@@ -123,7 +151,7 @@ export default defineNuxtSchema({
           type: 'boolean',
           title: 'Color Mode',
           description: 'Hide or display the color mode button in the footer.',
-          icon: 'i-mdi-moon-waning-crescent',
+          icon: 'i-heroicons-moon-20-solid',
           default: false
         }),
         links: field({
@@ -132,6 +160,41 @@ export default defineNuxtSchema({
           description: 'Array of link object displayed in footer.',
           icon: 'i-mdi-link-variant',
           default: []
+        })
+      }
+    }),
+    toc: group({
+      title: 'Table of contents',
+      description: 'TOC configuration.',
+      icon: 'i-heroicons-table-cells-solid',
+      fields: {
+        title: field({
+          type: 'string',
+          title: 'Title',
+          description: 'Text to display as title of the main toc.',
+          icon: 'i-heroicons-pencil-square',
+          default: ''
+        }),
+        bottom: group({
+          title: 'Bottom',
+          description: 'Bottom TOC configuration.',
+          icon: 'i-heroicons-bars-arrow-down-solid',
+          fields: {
+            title: field({
+              type: 'string',
+              title: 'Title',
+              description: 'Text to display as title of the bottom toc.',
+              icon: 'i-heroicons-pencil-square',
+              default: ''
+            }),
+            links: field({
+              type: 'array',
+              title: 'Links',
+              description: 'Array of link object displayed in bottom toc.',
+              icon: 'i-mdi-link-variant',
+              default: []
+            })
+          }
         })
       }
     })
