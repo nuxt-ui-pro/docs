@@ -134,6 +134,41 @@ export default defineNuxtSchema({
           default: []
         })
       }
+    }),
+    toc: group({
+      title: 'Table of contents',
+      description: 'TOC configuration.',
+      icon: 'i-heroicons-table-cells-solid',
+      fields: {
+        title: field({
+          type: 'string',
+          title: 'Title',
+          description: 'Text to display as title of the main toc.',
+          icon: 'i-heroicons-pencil-square',
+          default: ''
+        }),
+        bottom: group({
+          title: 'Bottom',
+          description: 'Bottom TOC configuration.',
+          icon: 'i-heroicons-bars-arrow-down-solid',
+          fields: {
+            title: field({
+              type: 'string',
+              title: 'Title',
+              description: 'Text to display as title of the bottom toc.',
+              icon: 'i-heroicons-pencil-square',
+              default: ''
+            }),
+            links: field({
+              type: 'array',
+              title: 'Links',
+              description: 'Array of link object displayed in bottom toc.',
+              icon: 'i-mdi-link-variant',
+              default: []
+            })
+          }
+        })
+      }
     })
   }
 })
