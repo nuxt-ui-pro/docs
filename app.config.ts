@@ -56,6 +56,7 @@ export default defineAppConfig({
     title: 'Table of Contents',
     bottom: {
       title: 'Community',
+      edit: 'https://github.com/nuxt-ui-pro/docs/edit/main/content',
       links: [{
         icon: 'i-heroicons-star',
         label: 'Star on GitHub',

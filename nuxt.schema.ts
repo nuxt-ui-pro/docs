@@ -172,7 +172,7 @@ export default defineNuxtSchema({
           type: 'string',
           title: 'Title',
           description: 'Text to display as title of the main toc.',
-          icon: 'i-heroicons-pencil-square',
+          icon: 'i-mdi-format-title',
           default: ''
         }),
         bottom: group({
@@ -184,6 +184,13 @@ export default defineNuxtSchema({
               type: 'string',
               title: 'Title',
               description: 'Text to display as title of the bottom toc.',
+              icon: 'i-mdi-format-title',
+              default: ''
+            }),
+            edit: field({
+              type: 'string',
+              title: 'Edit Page Link',
+              description: 'URL of your repository content folder.',
               icon: 'i-heroicons-pencil-square',
               default: ''
             }),
