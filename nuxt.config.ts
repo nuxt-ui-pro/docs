@@ -22,9 +22,12 @@ export default defineNuxtConfig({
       'DM+Sans': [400, 500, 600, 700]
     }
   },
-  routeRules: {
-    // Used for Search panel
-    '/api/search.json': { prerender: true }
+  nitro: {
+    prerender: {
+      routes: [
+        '/api/search.json'
+      ]
+    }
   },
   // Devtools / Typescript
   devtools: { enabled: true },
