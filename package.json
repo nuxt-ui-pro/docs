@@ -28,8 +28,5 @@
     "eslint": "^8.53.0",
     "typescript": "^5.2.2",
     "vue-tsc": "^1.8.22"
-  },
-  "resolutions": {
-    "@nuxtjs/color-mode": "3.3.0"
   }
 }
