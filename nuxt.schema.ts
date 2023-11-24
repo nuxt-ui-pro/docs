@@ -61,16 +61,16 @@ export default defineNuxtSchema({
           title: 'Primary',
           description: 'Primary color of your UI.',
           icon: 'i-mdi-palette-outline',
-          default: 'sky',
-          required: ['sky', 'mint', 'rose', 'amber', 'violet', 'emerald', 'fuchsia', 'indigo', 'lime', 'orange', 'pink', 'purple', 'red', 'teal', 'yellow', 'green', 'blue', 'cyan', 'gray', 'white', 'black'],
+          default: 'green',
+          required: ['sky', 'mint', 'rose', 'amber', 'violet', 'emerald', 'fuchsia', 'indigo', 'lime', 'orange', 'pink', 'purple', 'red', 'teal', 'yellow', 'green', 'blue', 'cyan', 'gray', 'white', 'black']
         }),
         gray: field({
           type: 'string',
           title: 'Gray',
           description: 'Gray color of your UI.',
           icon: 'i-mdi-palette-outline',
-          default: 'zinc',
-          required: ['slate', 'cool', 'zinc', 'neutral', 'stone'],
+          default: 'slate',
+          required: ['slate', 'cool', 'zinc', 'neutral', 'stone']
         })
       }
     }),
