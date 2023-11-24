@@ -55,6 +55,22 @@ export default defineNuxtSchema({
               default: 'i-heroicons-hashtag-20-solid'
             })
           }
+        }),
+        primary: field({
+          type: 'string',
+          title: 'Primary',
+          description: 'Primary color of your UI.',
+          icon: 'i-mdi-palette-outline',
+          default: 'green',
+          required: ['sky', 'mint', 'rose', 'amber', 'violet', 'emerald', 'fuchsia', 'indigo', 'lime', 'orange', 'pink', 'purple', 'red', 'teal', 'yellow', 'green', 'blue', 'cyan', 'gray', 'white', 'black']
+        }),
+        gray: field({
+          type: 'string',
+          title: 'Gray',
+          description: 'Gray color of your UI.',
+          icon: 'i-mdi-palette-outline',
+          default: 'slate',
+          required: ['slate', 'cool', 'zinc', 'neutral', 'stone']
         })
       }
     }),
