@@ -69,7 +69,7 @@ export default defineNuxtSchema({
           title: 'Gray',
           description: 'Gray color of your UI.',
           icon: 'i-mdi-palette-outline',
-          default: 'zinc',
+          default: 'slate',
           required: ['slate', 'cool', 'zinc', 'neutral', 'stone'],
         })
       }
