@@ -17,20 +17,8 @@ hero:
       target: '_blank'
       size: lg
   code: |
-    ```vue [pages/\[...slug\\].vue]
-    <template>
-      <UPage>
-        <UPageHeader :title="page.title" :description="page.description" :links="page.links" />
-
-        <UPageBody prose>
-          <ContentRenderer v-if="page.body" :value="page" />
-        </UPageBody>
-
-        <template #right>
-          <UDocsToc :links="page.body.toc.links" />
-        </template>
-      </UPage>
-    </template>
+    ```bash [Terminal]
+    npx nuxi init -t github:nuxt-ui-pro/docs
     ```
 features:
   title: 'All-in-one docs template'

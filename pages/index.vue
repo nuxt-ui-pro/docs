@@ -22,7 +22,7 @@ defineOgImage({
         <MDC :value="page.hero.title" />
       </template>
 
-      <MDC :value="page.hero.code" tag="pre" class="prose prose-primary dark:prose-invert max-w-none" />
+      <MDC :value="page.hero.code" tag="pre" class="prose prose-primary dark:prose-invert mx-auto" />
     </ULandingHero>
 
     <ULandingSection :title="page.features.title">
