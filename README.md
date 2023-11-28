@@ -10,6 +10,12 @@
 - [Documentation](https://ui.nuxt.com/pro/guide)
 - [Clone on Nuxt Studio](https://nuxt.studio/themes/docs)
 
+## Quick Start
+
+```bash [Terminal]
+npx nuxi init -t github:nuxt-ui-pro/docs
+```
+
 ## Setup
 
 Make sure to install the dependencies:
