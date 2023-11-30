@@ -4,10 +4,19 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
     '@nuxt/ui',
+    '@nuxthq/studio',
     '@nuxtjs/fontaine',
     '@nuxtjs/google-fonts',
     'nuxt-og-image'
   ],
+  hooks: {
+    // Define `@nuxt/ui` components as global to use them in `.md` (feel free to add those you need)
+    'components:extend': (components) => {
+      const globals = components.filter((c) => ['UButton'].includes(c.pascalName))
+
+      globals.forEach((c) => c.global = true)
+    }
+  },
   ui: {
     icons: ['heroicons', 'simple-icons']
   },
