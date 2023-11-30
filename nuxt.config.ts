@@ -1,3 +1,4 @@
+// import { defineNuxtModule } from 'nuxt/kit'
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   extends: ['@nuxt/ui-pro'],
@@ -6,8 +7,16 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxtjs/fontaine',
     '@nuxtjs/google-fonts',
-    'nuxt-og-image'
+    'nuxt-og-image',
+    '@nuxthq/studio',
   ],
+  hooks: {
+    // Define @nuxt/ui components as global (to use them in markdown)
+    'components:extend': (components) => {
+      const globals = components.filter((c) => ['UButton'].includes(c.pascalName))
+      globals.forEach((c) => c.global = true)
+    }
+  },
   ui: {
     icons: ['heroicons', 'simple-icons']
   },
