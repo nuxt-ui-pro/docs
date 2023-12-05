@@ -6,7 +6,7 @@ definePageMeta({
 })
 
 const route = useRoute()
-const { toc } = useAppConfig()
+const { toc, seo } = useAppConfig()
 
 const { data: page } = await useAsyncData(route.path, () => queryContent(route.path).findOne())
 if (!page.value) {
@@ -20,9 +20,9 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => qu
 )
 
 useSeoMeta({
-  titleTemplate: '%s - Nuxt UI Pro - Docs template',
+  titleTemplate: `%s - ${seo?.siteName}`,
   title: page.value.title,
-  ogTitle: `${page.value.title} - Nuxt UI Pro - Docs template`,
+  ogTitle: `${page.value.title} - ${seo?.siteName}`,
   description: page.value.description,
   ogDescription: page.value.description
 })

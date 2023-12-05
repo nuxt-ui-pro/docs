@@ -16,42 +16,42 @@ export default defineNuxtSchema({
               type: 'icon',
               title: 'Search Bar',
               description: 'Icon to display in the search bar.',
-              icon: 'i-heroicons-magnifying-glass-20-solid',
+              icon: 'i-mdi-magnify',
               default: 'i-heroicons-magnifying-glass-20-solid'
             }),
             dark: field({
               type: 'icon',
               title: 'Dark mode',
               description: 'Icon of color mode button for dark mode.',
-              icon: 'i-heroicons-moon-20-solid',
+              icon: 'i-mdi-moon-waning-crescent',
               default: 'i-heroicons-moon-20-solid'
             }),
             light: field({
               type: 'icon',
               title: 'Light mode',
               description: 'Icon of color mode button for light mode.',
-              icon: 'i-heroicons-sun-20-solid',
+              icon: 'i-mdi-white-balance-sunny',
               default: 'i-heroicons-sun-20-solid'
             }),
             external: field({
               type: 'icon',
               title: 'External Link',
               description: 'Icon for external link.',
-              icon: 'i-heroicons-arrow-up-right-20-solid',
+              icon: 'i-mdi-arrow-top-right',
               default: 'i-heroicons-arrow-up-right-20-solid'
             }),
             chevron: field({
               type: 'icon',
               title: 'Chevron',
               description: 'Icon for chevron.',
-              icon: 'i-heroicons-chevron-down-20-solid',
+              icon: 'i-mdi-chevron-down',
               default: 'i-heroicons-chevron-down-20-solid'
             }),
             hash: field({
               type: 'icon',
               title: 'Hash',
               description: 'Icon for hash anchors.',
-              icon: 'i-heroicons-hashtag-20-solid',
+              icon: 'i-ph-hash',
               default: 'i-heroicons-hashtag-20-solid'
             })
           }
@@ -74,6 +74,20 @@ export default defineNuxtSchema({
         })
       }
     }),
+    seo: group({
+      title: 'SEO',
+      description: 'SEO configuration.',
+      icon: 'i-ph-app-window',
+      fields: {
+        siteName: field({
+          type: 'string',
+          title: 'Site Name',
+          description: 'Name used in ogSiteName and used as second part of your page title (My page title - Nuxt UI Pro).',
+          icon: 'i-mdi-web',
+          default: []
+        })
+      },
+    }),
     header: group({
       title: 'Header',
       description: 'Header configuration.',
@@ -88,14 +102,14 @@ export default defineNuxtSchema({
               type: 'media',
               title: 'Light Mode Logo',
               description: 'Pick an image from your gallery.',
-              icon: 'i-heroicons-sun-20-solid',
+              icon: 'i-mdi-white-balance-sunny',
               default: ''
             }),
             dark: field({
               type: 'media',
               title: 'Dark Mode Logo',
               description: 'Pick an image from your gallery.',
-              icon: 'i-heroicons-moon-20-solid',
+              icon: 'i-mdi-moon-waning-crescent',
               default: ''
             }),
             alt: field({
@@ -118,7 +132,7 @@ export default defineNuxtSchema({
           type: 'boolean',
           title: 'Color Mode',
           description: 'Hide or display the color mode button in your header.',
-          icon: 'i-heroicons-moon-20-solid',
+          icon: 'i-mdi-moon-waning-crescent',
           default: true
         }),
         links: field({
@@ -146,7 +160,7 @@ export default defineNuxtSchema({
           type: 'boolean',
           title: 'Color Mode',
           description: 'Hide or display the color mode button in the footer.',
-          icon: 'i-heroicons-moon-20-solid',
+          icon: 'i-mdi-moon-waning-crescent',
           default: false
         }),
         links: field({
@@ -161,7 +175,7 @@ export default defineNuxtSchema({
     toc: group({
       title: 'Table of contents',
       description: 'TOC configuration.',
-      icon: 'i-heroicons-table-cells-solid',
+      icon: 'i-mdi-table-of-contents',
       fields: {
         title: field({
           type: 'string',
@@ -173,7 +187,7 @@ export default defineNuxtSchema({
         bottom: group({
           title: 'Bottom',
           description: 'Bottom TOC configuration.',
-          icon: 'i-heroicons-bars-arrow-down-solid',
+          icon: 'i-mdi-table-of-contents',
           fields: {
             title: field({
               type: 'string',
@@ -186,7 +200,7 @@ export default defineNuxtSchema({
               type: 'string',
               title: 'Edit Page Link',
               description: 'URL of your repository content folder.',
-              icon: 'i-heroicons-pencil-square',
+              icon: 'i-ph-note-pencil',
               default: ''
             }),
             links: field({
