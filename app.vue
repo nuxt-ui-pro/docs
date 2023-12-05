@@ -22,7 +22,7 @@ useHead({
 })
 
 useSeoMeta({
-  ogSiteName: seo.siteName,
+  ogSiteName: seo?.siteName,
   twitterCard: 'summary_large_image'
 })
 
