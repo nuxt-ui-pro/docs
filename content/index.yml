@@ -2,20 +2,25 @@ title: 'Nuxt UI Pro - Docs template'
 description: 'Welcome to Nuxt UI Pro documentation template.'
 navigation: false
 hero:
-  title: 'Nuxt UI Pro :br [Docs template]{.text-primary}'
+  title: 'Build your docs in seconds'
   description: 'Create your documentation in seconds with this template!'
   orientation: horizontal
+  headline:
+    label: Made with Nuxt UI Pro
+    to: https://ui.nuxt.com/pro
+    icon: i-heroicons-arrow-top-right-on-square-20-solid
   links:
-    - label: 'Get started'
-      icon: 'i-heroicons-rocket-launch'
+    - label: Get started
+      icon: i-heroicons-arrow-right-20-solid
+      trailing: true
       to: '/getting-started'
       size: lg
-    - label: 'Use this template'
-      icon: 'i-simple-icons-github'
-      color: 'white'
-      to: 'https://github.com/new?template_name=docs&template_owner=nuxt-ui-pro'
-      target: '_blank'
+    - label: Use this template
+      icon: i-simple-icons-github
       size: lg
+      color: gray
+      to: https://github.com/nuxt-ui-pro/docs
+      target: _blank
   code: |
     ```bash [Terminal]
     npx nuxi init -t github:nuxt-ui-pro/docs
