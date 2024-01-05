@@ -1,38 +1,37 @@
-![nuxt-ui-pro-docs-template](https://github.com/nuxt-ui-pro/docs/assets/904724/67fc15a7-92f6-4566-95b9-fe099012473c)
-
-# Nuxt UI Pro - Docs template
-
-[![Nuxt UI Pro](https://img.shields.io/badge/Made%20with-Nuxt%20UI%20Pro-00DC82?logo=nuxt.js&labelColor=020420)](https://ui.nuxt.com/pro)
-[![Nuxt Studio](https://img.shields.io/badge/Open%20in%20Nuxt%20Studio-18181B?&logo=nuxt.js&logoColor=3BB5EC)](https://nuxt.studio/themes/docs)
-
-- [Live demo](https://nuxt-ui-pro-template-docs.vercel.app/)
-- [Play on Stackblitz](https://stackblitz.com/github/nuxt-ui-pro/docs)
-- [Documentation](https://ui.nuxt.com/pro/guide)
-- [Clone on Nuxt Studio](https://nuxt.studio/themes/docs)
+# Standards-Hub - Docs template; How to make your own site 
 
 ## Quick Start
+
+If you want a fresh start, install Nuxt UI Pro
 
 ```bash [Terminal]
 npx nuxi init -t github:nuxt-ui-pro/docs
 ```
 
+or you can just fork it or clone it either from our site or from official site
+
+```bash [Terminal]
+git clone https://github.com/standards-hub/docs.git
+```
+
 ## Setup
 
-Make sure to install the dependencies:
+Make sure to install the dependencies after installing/cloning the app
 
 ```bash
 # npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
+
+## Changing environment from default state
+
+### Changing the landing page
+In this section we adress several things:
+- Header (changing Logo)
+- Main section (changing text and cards)
+- Footer (changing text and links to social media)
+
+
 
 ## Development Server
 
@@ -41,15 +40,6 @@ Start the development server on `http://localhost:3000`:
 ```bash
 # npm
 npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
 ## Production
@@ -59,15 +49,6 @@ Build the application for production:
 ```bash
 # npm
 npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
 ```
 
 Locally preview production build:
@@ -75,15 +56,6 @@ Locally preview production build:
 ```bash
 # npm
 npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
@@ -95,15 +67,6 @@ Add `@nuxthq/studio` dependency to your package.json:
 ```bash
 # npm
 npm install --save-dev @nuxthq/studio
-
-# pnpm
-pnpm add -D @nuxthq/studio
-
-# yarn
-yarn add -D @nuxthq/studio
-
-# bun
-bun add -d @nuxthq/studio
 ```
 
 Add this module to your `nuxt.config.ts`:
