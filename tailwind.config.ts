@@ -8,7 +8,7 @@ export default <Partial<Config>>{
         sans: ['DM Sans', 'DM Sans fallback', ...defaultTheme.fontFamily.sans]
       },
       colors: {
-        green: {
+        pink: {
           50: '#EFFDF5',
           100: '#D9FBE8',
           200: '#B3F5D1',
