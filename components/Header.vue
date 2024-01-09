@@ -4,40 +4,39 @@ import type { NavItem } from '@nuxt/content/dist/runtime/types'
 const navigation = inject<NavItem[]>('navigation', [])
 
 const { header } = useAppConfig()
+
+const links = [{
+  label: 'Markdown',
+  to: '/markdown-guidelines/introduction/'
+}, {
+  label: 'GitHub',
+  to: '/github-guidelines/github/'
+}]
+
 </script>
 
 <template>
-  <UHeader>
+  <UHeader >
+
     <template #logo>
-      <template v-if="header?.logo?.dark || header?.logo?.light">
-        <UColorModeImage v-bind="{ class: 'h-6 w-auto', ...header?.logo }" />
-      </template>
-      <template v-else>
-        <img src="/images/S-H logo.png" class="h-8 rounded-full" height="70" width="40" alt="Standards-Hub">
+      <Logo class="w-auto h-6" />
+      <img src="/images/S-H logo.png" class="h-8 rounded-full" height="70" width="40" alt="Standards-Hub">
         Standards-Hub
-      </template>
     </template>
 
-    <template v-if="header?.search" #center>
-      <UDocsSearchButton class="hidden lg:flex" />
+    <template #center>
+      <UHeaderLinks :links="links" class="hidden lg:flex" /> <!-- this class allows links to be hidden in mobile preview -->
     </template>
 
     <template #right>
-      <UDocsSearchButton v-if="header?.search" :label="null" class="lg:hidden" />
-
-      <UColorModeButton v-if="header?.colorMode" />
-
-      <template v-if="header?.links">
-        <UButton
-          v-for="(link, index) of header.links"
-          :key="index"
-          v-bind="{ color: 'gray', variant: 'ghost', ...link }"
-        />
-      </template>
+      <UDocsSearchButton label="" />
+      <UColorModeButton />
+      <UButton to="https://github.com/standards-hub" target="_blank" icon="i-simple-icons-github" color="gray" variant="ghost" />
     </template>
 
-    <template #panel>
+    <template #panel> <!-- panel that opens when clicking on the hamburger menu -->
       <UNavigationTree :links="mapContentNavigation(navigation)" />
     </template>
+
   </UHeader>
 </template>
