@@ -95,7 +95,7 @@ export default defineNuxtSchema({
       fields: {
         logo: group({
           title: 'Logo',
-          description: 'Footer logo configuration.',
+          description: 'Header logo configuration.',
           icon: 'i-mdi-image-filter-center-focus-strong-outline',
           fields: {
             light: field({
