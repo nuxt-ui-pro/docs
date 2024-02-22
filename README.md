@@ -1,13 +1,13 @@
-![nuxt-ui-pro-docs-template](https://github.com/nuxt-ui-pro/docs/assets/904724/67fc15a7-92f6-4566-95b9-fe099012473c)
+![nuxt-ui-docs-social-card](https://github.com/nuxt-ui-pro/docs/assets/739984/f64e13d9-9ae0-4e03-bf7f-6be4c36cd9ba)
 
 # Nuxt UI Pro - Docs template
 
 [![Nuxt UI Pro](https://img.shields.io/badge/Made%20with-Nuxt%20UI%20Pro-00DC82?logo=nuxt.js&labelColor=020420)](https://ui.nuxt.com/pro)
 [![Nuxt Studio](https://img.shields.io/badge/Open%20in%20Nuxt%20Studio-18181B?&logo=nuxt.js&logoColor=3BB5EC)](https://nuxt.studio/themes/docs)
 
-- [Live demo](https://nuxt-ui-pro-template-docs.vercel.app/)
+- [Live demo](https://docs-template.nuxt.dev/)
 - [Play on Stackblitz](https://stackblitz.com/github/nuxt-ui-pro/docs)
-- [Documentation](https://ui.nuxt.com/pro/guide)
+- [Documentation](https://ui.nuxt.com/pro/getting-started)
 - [Clone on Nuxt Studio](https://nuxt.studio/themes/docs)
 
 ## Quick Start
