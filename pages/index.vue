@@ -7,12 +7,6 @@ useSeoMeta({
   description: page.value.description,
   ogDescription: page.value.description
 })
-
-defineOgImage({
-  component: 'Docs',
-  title: page.value.title,
-  description: page.value.description
-})
 </script>
 
 <template>

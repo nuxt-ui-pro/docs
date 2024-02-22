@@ -23,6 +23,8 @@ useHead({
 
 useSeoMeta({
   ogSiteName: seo?.siteName,
+  ogImage: 'https://docs-template.nuxt.dev/social-card.png',
+  twitterImage: 'https://docs-template.nuxt.dev/social-card.png',
   twitterCard: 'summary_large_image'
 })
 
