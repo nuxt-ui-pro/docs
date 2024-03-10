@@ -34,6 +34,8 @@ provide('navigation', navigation)
 
 <template>
   <div>
+    <NuxtLoadingIndicator />
+
     <Header />
 
     <UMain>
