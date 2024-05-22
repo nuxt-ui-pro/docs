@@ -20,6 +20,9 @@ export default defineNuxtConfig({
   ui: {
     icons: ['heroicons', 'simple-icons']
   },
+  colorMode: {
+    disableTransition: true
+  },
   routeRules: {
     '/api/search.json': { prerender: true }
   },
