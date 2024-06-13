@@ -24,8 +24,8 @@ export default defineNuxtConfig({
     disableTransition: true
   },
   routeRules: {
-    '/api/search.json': { prerender: true },
-    '/': { prerender: true }
+    '/': { prerender: true },
+    '/api/search.json': { prerender: true }
   },
   devtools: {
     enabled: true
