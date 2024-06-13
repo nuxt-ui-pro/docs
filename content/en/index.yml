@@ -13,7 +13,7 @@ hero:
     - label: Get started
       icon: i-heroicons-arrow-right-20-solid
       trailing: true
-      to: '/getting-started'
+      to: '/en/getting-started'
       size: lg
     - label: Use this template
       icon: i-simple-icons-github

@@ -1,4 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
 export default defineNuxtConfig({
   extends: ['@nuxt/ui-pro'],
   modules: [
@@ -38,6 +39,17 @@ export default defineNuxtConfig({
         commaDangle: 'never',
         braceStyle: '1tbs'
       }
+    }
+  },
+  runtimeConfig: {
+    public: {
+      defaultLanguage: 'en',
+      languages: [
+        {
+          code: 'en',
+          name: 'English'
+        },
+      ]
     }
   }
 })

@@ -1,5 +1,7 @@
 <script setup lang="ts">
-const { data: page } = await useAsyncData('index', () => queryContent('/').findOne())
+const config = useRuntimeConfig()
+
+const { data: page } = await useAsyncData('index', () => queryContent(`/${config.public.defaultLanguage}`).findOne())
 
 useSeoMeta({
   titleTemplate: '',
@@ -46,7 +48,7 @@ useSeoMeta({
       </template>
 
       <template #title>
-        <MDC :value="page.hero.title" />
+        <MDC :value="page.hero.title"/>
       </template>
 
       <MDC
