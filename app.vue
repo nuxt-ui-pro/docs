@@ -2,8 +2,26 @@
 import type { ParsedContent } from '@nuxt/content/dist/runtime/types'
 
 const { seo } = useAppConfig()
+const route = useRoute()
 
-const { data: navigation } = await useAsyncData('navigation', () => fetchContentNavigation())
+const { data: navigation, refresh: refreshNavigation } = await useAsyncData('navigation', () => fetchContentNavigation(), {
+  transform: (data) => {
+    const result = []
+
+    data.forEach((item) => {
+      if (item.title.toLowerCase() === route.fullPath.split('/')[1]) {
+        if (item.children) {
+          item.children.forEach((child) => {
+            result.push(child)
+          })
+        }
+      }
+    })
+
+    return result
+  }
+})
+
 const { data: files } = useLazyFetch<ParsedContent[]>('/api/search.json', {
   default: () => [],
   server: false
@@ -29,7 +47,7 @@ useSeoMeta({
   twitterCard: 'summary_large_image'
 })
 
-provide('navigation', navigation)
+provide('navigation', { navigation, refreshNavigation })
 </script>
 
 <template>
