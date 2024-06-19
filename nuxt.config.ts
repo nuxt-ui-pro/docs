@@ -24,7 +24,6 @@ export default defineNuxtConfig({
     disableTransition: true
   },
   routeRules: {
-    '/': { prerender: true },
     '/api/search.json': { prerender: true }
   },
   devtools: {
@@ -32,6 +31,9 @@ export default defineNuxtConfig({
   },
   typescript: {
     strict: false
+  },
+  future: {
+    compatibilityVersion: 4
   },
   eslint: {
     config: {
