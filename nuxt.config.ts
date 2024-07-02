@@ -17,10 +17,6 @@ export default defineNuxtConfig({
       globals.forEach(c => c.global = true)
     }
   },
-  // Temporary workaround for prerender regression. see https://github.com/nuxt/nuxt/issues/27490
-  routeRules: {
-    '/': { prerender: true }
-  },
   ui: {
     icons: ['heroicons', 'simple-icons']
   },
@@ -28,6 +24,8 @@ export default defineNuxtConfig({
     disableTransition: true
   },
   routeRules: {
+    // Temporary workaround for prerender regression. see https://github.com/nuxt/nuxt/issues/27490
+    '/': { prerender: true },
     '/api/search.json': { prerender: true }
   },
   devtools: {
