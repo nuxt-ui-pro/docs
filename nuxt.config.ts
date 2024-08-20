@@ -21,10 +21,6 @@ export default defineNuxtConfig({
     }
   },
 
-  ui: {
-    icons: ['heroicons', 'simple-icons']
-  },
-
   colorMode: {
     disableTransition: true
   },
