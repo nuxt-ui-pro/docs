@@ -8,7 +8,7 @@
 - [Live demo](https://docs-template.nuxt.dev/)
 - [Play on Stackblitz](https://stackblitz.com/github/nuxt-ui-pro/docs)
 - [Documentation](https://ui.nuxt.com/pro/getting-started)
-- [Clone on Nuxt Studio](https://nuxt.studio/themes/docs)
+- [Clone on Nuxt Studio](https://nuxt.studio/templates/docs)
 
 ## Quick Start
 
