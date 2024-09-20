@@ -51,7 +51,6 @@ useSeoMeta({
 
       <MDC
         :value="page.hero.code"
-        tag="pre"
         class="prose prose-primary dark:prose-invert mx-auto"
       />
     </ULandingHero>
