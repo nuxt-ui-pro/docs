@@ -25,9 +25,16 @@ export default defineNuxtConfig({
     disableTransition: true
   },
 
+  nitro: {
+    prerender: {
+      routes: [
+        '/'
+      ],
+      crawlLinks: true
+    }
+  },
+
   routeRules: {
-    // Temporary workaround for prerender regression. see https://github.com/nuxt/nuxt/issues/27490
-    '/': { prerender: true },
     '/api/search.json': { prerender: true }
   },
 
