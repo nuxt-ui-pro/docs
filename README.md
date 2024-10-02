@@ -10,6 +10,8 @@
 - [Documentation](https://ui.nuxt.com/pro/getting-started)
 - [Clone on Nuxt Studio](https://nuxt.studio/templates/docs)
 
+[![Deploy to NuxtHub](https://hub.nuxt.com/button.svg)](https://hub.nuxt.com/new?repo=nuxt-ui-pro/docs)
+
 ## Quick Start
 
 ```bash [Terminal]
