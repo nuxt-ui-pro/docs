@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import type { ParsedContent } from '@nuxt/content'
 import type { NuxtError } from '#app'
 
 defineProps({
@@ -20,11 +19,8 @@ useSeoMeta({
   description: 'We are sorry but this page could not be found.'
 })
 
-const { data: navigation } = await useAsyncData('navigation', () => fetchContentNavigation())
-const { data: files } = useLazyFetch<ParsedContent[]>('/api/search.json', {
-  default: () => [],
-  server: false
-})
+const { data: navigation } = await useAsyncData('navigation', () => queryCollectionNavigation('docs'))
+const { data: files } = await useAsyncData('files', () => queryCollectionSearchSections('docs', { ignoredTags: ['style'] }))
 
 provide('navigation', navigation)
 </script>
@@ -44,10 +40,10 @@ provide('navigation', navigation)
     <AppFooter />
 
     <ClientOnly>
-      <LazyUContentSearch
+      <!-- <LazyUContentSearch
         :files="files"
         :navigation="navigation"
-      />
+      /> -->
     </ClientOnly>
 
     <UNotifications />

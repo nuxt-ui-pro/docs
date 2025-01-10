@@ -1,17 +1,22 @@
 <script setup lang="ts">
-const { data: page } = await useAsyncData('index', () => queryContent('/').findOne())
+const { data: page } = await useAsyncData('index', () => queryCollection('landing').path('/').first())
+if (!page.value) {
+  throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
+}
 
 useSeoMeta({
-  titleTemplate: '',
-  title: page.value.title,
-  ogTitle: page.value.title,
-  description: page.value.description,
-  ogDescription: page.value.description
+  title: page.value.seo.title,
+  ogTitle: page.value.seo.title,
+  description: page.value.seo.description,
+  ogDescription: page.value.seo.description
 })
 </script>
 
 <template>
-  <div>
+  <p>
+    <NuxtLink to="/getting-started/installation">Get started</NuxtLink>
+  </p>
+  <!-- <div>
     <ULandingHero
       v-if="page.hero"
       v-bind="page.hero"
@@ -67,5 +72,5 @@ useSeoMeta({
         />
       </UPageGrid>
     </ULandingSection>
-  </div>
+  </div> -->
 </template>
