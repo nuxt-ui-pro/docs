@@ -1,11 +1,15 @@
 export default defineAppConfig({
   ui: {
-    primary: 'green',
-    gray: 'slate',
+    colors: {
+      primary: 'green',
+      neutral: 'slate'
+    }
+  },
+  uiPro: {
     footer: {
-      bottom: {
-        left: 'text-sm text-gray-500 dark:text-gray-400',
-        wrapper: 'border-t border-gray-200 dark:border-gray-800'
+      slots: {
+        root: 'border-t border-gray-200 dark:border-gray-800',
+        left: 'text-sm text-gray-500 dark:text-gray-400'
       }
     }
   },
@@ -58,12 +62,12 @@ export default defineAppConfig({
       title: 'Community',
       edit: 'https://github.com/nuxt-ui-pro/docs/edit/main/content',
       links: [{
-        icon: 'i-heroicons-star',
+        icon: 'i-lucide-star',
         label: 'Star on GitHub',
         to: 'https://github.com/nuxt/ui',
         target: '_blank'
       }, {
-        icon: 'i-heroicons-book-open',
+        icon: 'i-lucide-book-open',
         label: 'Nuxt UI Pro docs',
         to: 'https://ui.nuxt.com/pro/guide',
         target: '_blank'

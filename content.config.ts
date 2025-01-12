@@ -4,13 +4,13 @@ export default defineContentConfig({
   collections: {
     landing: defineCollection({
       type: 'page',
-      source: 'index.yml'
+      source: 'index.md'
     }),
     docs: defineCollection({
       type: 'page',
       source: {
         include: '**',
-        exclude: ['index.yml']
+        exclude: ['index.md']
       },
       schema: z.object({
         toc: z.boolean().optional(),

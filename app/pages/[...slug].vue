@@ -1,10 +1,14 @@
 <script setup lang="ts">
+import type { ContentNavigationItem } from '@nuxt/content'
+import { findPageHeadline } from '#ui-pro/utils/content'
+
 definePageMeta({
   layout: 'docs'
 })
 
 const route = useRoute()
 const { toc, seo } = useAppConfig()
+const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
 
 const { data } = await useAsyncData(route.path, () => Promise.all([
   queryCollection('docs').path(route.path).first(),
@@ -32,10 +36,10 @@ console.log('page?.value :', page?.value)
 
 defineOgImageComponent('Docs')
 
-const headline = computed(() => findPageHeadline(page.value))
+const headline = computed(() => findPageHeadline(navigation.value, page.value))
 
 const links = computed(() => [toc?.bottom?.edit && {
-  icon: 'i-heroicons-pencil-square',
+  icon: 'i-lucide-external-link',
   label: 'Edit this page',
   to: `${toc.bottom.edit}/${page?.value?.path}`,
   target: '_blank'
@@ -43,7 +47,7 @@ const links = computed(() => [toc?.bottom?.edit && {
 </script>
 
 <template>
-  <UPage>
+  <UPage v-if="page">
     <UPageHeader
       :title="page.title"
       :description="page.description"
@@ -51,13 +55,13 @@ const links = computed(() => [toc?.bottom?.edit && {
       :headline="headline"
     />
 
-    <UPageBody prose>
+    <UPageBody>
       <ContentRenderer
-        v-if="page.body"
+        v-if="page"
         :value="page"
       />
 
-      <hr v-if="surround?.length">
+      <USeparator v-if="surround?.length" />
 
       <UContentSurround :surround="surround" />
     </UPageBody>
@@ -78,7 +82,7 @@ const links = computed(() => [toc?.bottom?.edit && {
             class="hidden lg:block space-y-6"
             :class="{ '!mt-6': page.body?.toc?.links?.length }"
           >
-            <UDivider
+            <USeparator
               v-if="page.body?.toc?.links?.length"
               type="dashed"
             />

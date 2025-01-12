@@ -44,16 +44,10 @@ provide('navigation', navigation)
     <AppFooter />
 
     <ClientOnly>
-      <p>Files:</p>
-      <pre>{{ files }}</pre>
-      <p>Navigation:</p>
-      <pre>{{ navigation }}</pre>
-      <!-- <LazyUContentSearch
+      <LazyUContentSearch
         :files="files"
         :navigation="navigation"
-      /> -->
+      />
     </ClientOnly>
-
-    <UNotifications />
   </div>
 </template>

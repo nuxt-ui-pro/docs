@@ -40,10 +40,10 @@ provide('navigation', navigation)
     <AppFooter />
 
     <ClientOnly>
-      <!-- <LazyUContentSearch
+      <LazyUContentSearch
         :files="files"
         :navigation="navigation"
-      /> -->
+      />
     </ClientOnly>
 
     <UNotifications />

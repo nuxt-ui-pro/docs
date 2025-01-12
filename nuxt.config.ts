@@ -1,14 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  extends: ['@nuxt/ui-pro'],
-
   modules: [
+    '@nuxt/ui-pro',
     '@nuxt/content',
     '@nuxt/eslint',
     '@nuxt/fonts',
     '@nuxt/image',
     '@nuxt/ui',
-    '@nuxthq/studio',
     'nuxt-og-image'
   ],
 
@@ -16,8 +14,16 @@ export default defineNuxtConfig({
     enabled: true
   },
 
+  css: ['~/assets/css/main.css'],
+
   colorMode: {
     disableTransition: true
+  },
+
+  content: {
+    preview: {
+      api: 'https://api.nuxt.studio'
+    }
   },
 
   routeRules: {
