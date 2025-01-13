@@ -14,7 +14,7 @@
   "dependencies": {
     "@iconify-json/lucide": "^1.2.22",
     "@iconify-json/simple-icons": "^1.2.19",
-    "@nuxt/content": "https://pkg.pr.new/@nuxt/content@f99be26",
+    "@nuxt/content": "https://pkg.pr.new/@nuxt/content@5c77cf3",
     "@nuxt/fonts": "^0.10.3",
     "@nuxt/image": "^1.9.0",
     "@nuxt/ui-pro": "https://pkg.pr.new/@nuxt/ui-pro@7676093",
