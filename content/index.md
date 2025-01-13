@@ -6,9 +6,11 @@ seo:
 
 ::u-page-hero{orientation="horizontal"}
 #default
-```bash [Terminal]
-  npx nuxi init -t github:nuxt-ui-pro/docs
+:::prose-pre{filename="Terminal"}
+```bash
+npx nuxi init -t github:nuxt-ui-pro/docs
 ```
+:::
 
 #title
 Build your docs in seconds
@@ -20,11 +22,13 @@ Create your documentation in seconds with this template!
   ::u-button
   ---
   trailingIcon: i-lucide-external-link
-  size: lg"
   to: https://ui.nuxt.com/pro
   variant: subtle
+  class: 'rounded-full'
+  size: sm
   ---
-  Made with Nuxt UIPro
+  #default
+  Made with Nuxt UI Pro
   ::
 
 #links
@@ -34,6 +38,7 @@ Create your documentation in seconds with this template!
   to: /getting-started
   trailingIcon: i-lucide-arrow-right
   ---
+  #default
   Get started
   :::
 
@@ -43,9 +48,10 @@ Create your documentation in seconds with this template!
   size: xl
   target: _blank
   to: https://ui.nuxt.com/pro
-  trailingIcon: i-simple-icons-github
+  icon: i-simple-icons-github
   variant: subtle
   ---
+  #default
   Use this template
   :::
 ::
@@ -93,7 +99,7 @@ All-in-one docs template
   #description
   Write your pages with MDC thanks to Nuxt Content.
   :::
-  
+
   :::u-page-feature
   ---
   icon: i-lucide-sparkles
