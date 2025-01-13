@@ -123,7 +123,7 @@ All-in-one docs template
   :::u-page-feature
   ---
   icon: i-simple-icons-nuxtdotjs
-  to: https://nuxt.studio
+  to: https://content.nuxt.com/docs/studio
   target: '_blank'
   ---
   #title
