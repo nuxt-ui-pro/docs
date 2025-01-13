@@ -96,7 +96,7 @@ All-in-one docs template
   
   :::u-page-feature
   ---
-  icon: i-heroicons-sparkles-20-solid
+  icon: i-lucide-sparkles
   to: https://ui.nuxt.com
   target: '_blank'
   ---
@@ -135,7 +135,7 @@ All-in-one docs template
 
   :::u-page-feature
   ---
-  icon: i-heroicons-magnifying-glass-20-solid
+  icon: i-lucide-search
   to: https://ui.nuxt.com/pro/components/docs/docs-search
   target: '_blank'
   ---
