@@ -26,10 +26,6 @@ export default defineNuxtConfig({
     }
   },
 
-  routeRules: {
-    '/api/search.json': { prerender: true }
-  },
-
   future: {
     compatibilityVersion: 4
   },
