@@ -5,6 +5,7 @@
   "lockFileMaintenance": {
     "enabled": true
   },
+  "baseBranches": ["main", "v3"],
   "packageRules": [{
     "matchDepTypes": ["resolutions"],
     "enabled": false
