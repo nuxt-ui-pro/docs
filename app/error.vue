@@ -29,13 +29,7 @@ provide('navigation', navigation)
   <div>
     <AppHeader />
 
-    <UMain>
-      <UContainer>
-        <UPage>
-          <UError :error="error" />
-        </UPage>
-      </UContainer>
-    </UMain>
+    <UError :error="error" />
 
     <AppFooter />
 

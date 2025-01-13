@@ -65,7 +65,7 @@ const links = computed(() => [toc?.bottom?.edit && {
     </UPageBody>
 
     <template
-      v-if="page.toc !== false"
+      v-if="page?.body?.toc?.links?.length"
       #right
     >
       <UContentToc

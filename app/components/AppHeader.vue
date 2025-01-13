@@ -7,10 +7,12 @@ const { header } = useAppConfig()
 </script>
 
 <template>
-  <UHeader>
-    <UContentSearch
+  <UHeader :ui="{ center: 'flex-1' }">
+    <UContentSearchButton
       v-if="header?.search"
-      class="hidden lg:flex"
+      label="Search..."
+      variant="outline"
+      class="w-full"
     />
 
     <template #title>
@@ -29,7 +31,6 @@ const { header } = useAppConfig()
     <template #right>
       <UContentSearchButton
         v-if="header?.search"
-        :label="null"
         class="lg:hidden"
       />
 
