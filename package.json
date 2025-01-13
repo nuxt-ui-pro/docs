@@ -18,7 +18,7 @@
     "@nuxt/fonts": "^0.10.3",
     "@nuxt/image": "^1.9.0",
     "@nuxt/ui-pro": "https://pkg.pr.new/@nuxt/ui-pro@7676093",
-    "nuxt": "^3.15.1",
+    "nuxt": "3.14.1592",
     "nuxt-og-image": "^4.0.2"
   },
   "devDependencies": {
