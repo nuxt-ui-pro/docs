@@ -8,7 +8,7 @@ seo:
 #default
 :::prose-pre{filename="Terminal"}
 ```bash
-npx nuxi init -t github:nuxt-ui-pro/docs
+npx nuxi init -t github:nuxt-ui-pro/docs#v3
 ```
 :::
 
