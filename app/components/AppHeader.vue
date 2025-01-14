@@ -13,11 +13,21 @@ const { header } = useAppConfig()
       label="Search..."
       variant="outline"
       class="w-full"
-    />
+    >
+      <template #trailing>
+        <div class="flex items-center gap-0.5 ms-auto">
+          <UKbd value="meta" />
+          <UKbd value="k" />
+        </div>
+      </template>
+    </UContentSearchButton>
 
     <template #title>
       <template v-if="header?.logo?.dark || header?.logo?.light">
-        <UColorModeImage v-bind="{ class: 'h-6 w-auto', ...header?.logo }" />
+        <UColorModeImage
+          v-bind="header?.logo"
+          class="h-6 w-auto"
+        />
       </template>
       <template v-else>
         Nuxt UI Pro <UBadge
