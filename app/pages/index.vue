@@ -13,11 +13,9 @@ useSeoMeta({
 </script>
 
 <template>
-  <UContainer>
-    <ContentRenderer
-      v-if="page"
-      :value="page"
-      :prose="false"
-    />
-  </UContainer>
+  <ContentRenderer
+    v-if="page"
+    :value="page"
+    :prose="false"
+  />
 </template>
