@@ -8,7 +8,7 @@
   "ignoreDeps": [
     "vue-tsc"
   ],
-  "baseBranches": ["main", "v3"],
+  "baseBranches": ["v1", "v3"],
   "packageRules": [{
     "matchDepTypes": ["resolutions"],
     "enabled": false
