@@ -34,7 +34,12 @@ Create your documentation in seconds with this template!
   :::
 
 #links
-  :::u-button{size="xl" to="/getting-started" trailingIcon="i-lucide-arrow-right"}
+  :::u-button
+  ---
+  size: xl
+  to: /getting-started
+  trailing-icon: i-lucide-arrow-right
+  ---
   Get started
   :::
 
