@@ -15,13 +15,6 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
-  // TODO: Remove this once we have a proper API
-  content: {
-    preview: {
-      api: 'https://dev-api.nuxt.studio'
-    }
-  },
-
   future: {
     compatibilityVersion: 4
   },
