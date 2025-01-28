@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { ContentNavigationItem } from '@nuxt/content'
-import TemplateMenu from "~/components/TemplateMenu.vue";
 
 const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
 
