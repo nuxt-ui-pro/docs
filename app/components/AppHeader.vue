@@ -23,7 +23,9 @@ const { header } = useAppConfig()
     </UContentSearchButton>
 
     <template #left>
-      <LogoPro class="w-auto h-6 shrink-0" />
+      <NuxtLink to="/">
+        <LogoPro class="w-auto h-6 shrink-0" />
+      </NuxtLink>
       <TemplateMenu />
     </template>
 
