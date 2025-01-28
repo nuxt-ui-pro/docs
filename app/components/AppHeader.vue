@@ -23,19 +23,45 @@ const { header } = useAppConfig()
     </UContentSearchButton>
 
     <template #title>
-      <template v-if="header?.logo?.dark || header?.logo?.light">
-        <UColorModeImage
-          v-bind="header?.logo"
-          class="h-6 w-auto"
-        />
-      </template>
-      <template v-else>
-        Nuxt UI Pro <UBadge
-          label="Docs"
-          variant="subtle"
-          class="mb-0.5"
-        />
-      </template>
+      <div class="flex items-center gap-2">
+        <LogoPro class="w-auto h-6 shrink-0" />
+        <UDropdownMenu
+          v-slot="{ open }"
+          :modal="false"
+          :items="[{
+            label: `Starter`,
+            to: 'https://starter-template.nuxt.dev/'
+          }, {
+            label: `Landing`,
+            to: 'https://landing-template.nuxt.dev/'
+          }, {
+            label: `Docs`,
+            to: 'https://docs-template.nuxt.dev/',
+            checked: true,
+            type: 'checkbox'
+          }, {
+            label: `SaaS`,
+            to: 'https://saas-template.nuxt.dev/'
+          }, {
+            label: `Dashboard`,
+            to: 'https://dashboard-template.nuxt.dev/'
+          }]"
+          :ui="{ content: 'w-(--reka-dropdown-menu-trigger-width) min-w-0' }"
+          size="xs"
+        >
+          <UButton
+            label="Docs"
+            variant="subtle"
+            trailing-icon="i-lucide-chevron-down"
+            size="xs"
+            class="-mb-[6px] font-semibold rounded-full truncate"
+            :class="[open && 'bg-[var(--ui-primary)]/15 ']"
+            :ui="{
+              trailingIcon: ['transition-transform duration-200', open ? 'rotate-180' : undefined].filter(Boolean).join(' ')
+            }"
+          />
+        </UDropdownMenu>
+      </div>
     </template>
 
     <template #right>
