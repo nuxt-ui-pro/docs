@@ -20,9 +20,6 @@ importers:
       '@nuxt/content':
         specifier: ^3.0.1
         version: 3.0.1(@libsql/client@0.14.0)(magicast@0.3.5)(pg@8.13.1)(rollup@4.31.0)
-      '@nuxt/fonts':
-        specifier: ^0.10.3
-        version: 0.10.3(db0@0.2.1(@libsql/client@0.14.0)(better-sqlite3@11.8.1))(ioredis@5.4.2)(magicast@0.3.5)(rollup@4.31.0)(vite@6.0.9(@types/node@22.10.7)(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.37.0)(yaml@2.7.0))
       '@nuxt/image':
         specifier: ^1.9.0
         version: 1.9.0(db0@0.2.1(@libsql/client@0.14.0)(better-sqlite3@11.8.1))(ioredis@5.4.2)(magicast@0.3.5)(rollup@4.31.0)
