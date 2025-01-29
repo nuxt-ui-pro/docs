@@ -25,7 +25,7 @@ provide('navigation', navigation)
 </script>
 
 <template>
-  <div>
+  <UApp>
     <AppHeader />
 
     <UError :error="error" />
@@ -38,5 +38,5 @@ provide('navigation', navigation)
         :navigation="navigation"
       />
     </ClientOnly>
-  </div>
+  </UApp>
 </template>

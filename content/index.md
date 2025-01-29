@@ -9,29 +9,20 @@ seo:
 ---
 orientation: horizontal
 ---
+
   :::prose-pre{filename="Terminal"}
+
   ```bash
   npx nuxi init -t github:nuxt-ui-pro/docs#v3
   ```
+
   :::
 
 #title
-Build your docs in seconds
+Build your docs with Nuxt UI Pro
 
 #description
-Create your documentation in seconds with this template!
-
-#headline
-  :::u-button
-  ---
-  class: rounded-full
-  size: sm
-  to: https://ui.nuxt.com/pro
-  trailingIcon: i-lucide-external-link
-  variant: subtle
-  ---
-  Made with Nuxt UI Pro
-  :::
+Nuxt UI Pro is a collection of premium components built on top of Nuxt UI to create beautiful & responsive applications in minutes.
 
 #links
   :::u-button
@@ -49,7 +40,7 @@ Create your documentation in seconds with this template!
   icon: i-simple-icons-github
   size: xl
   target: _blank
-  to: https://ui.nuxt.com/pro
+  to: https://github.com/nuxt-ui-pro/docs/tree/v3
   variant: subtle
   ---
   Use this template
@@ -58,7 +49,7 @@ Create your documentation in seconds with this template!
 
 ::u-page-section
 #title
-All-in-one docs template
+All-in-one documentation template
 
 #links
   :::u-button
@@ -66,11 +57,11 @@ All-in-one docs template
   color: neutral
   size: lg
   target: _blank
-  to: /getting-started
+  to: https://ui3.nuxt.dev/getting-started/installation/pro/nuxt
   trailingIcon: i-lucide-arrow-right
   variant: subtle
   ---
-  Explore Nuxt UI Pro
+  Discover Nuxt UI Pro v3
   :::
 
 #features
@@ -82,7 +73,7 @@ All-in-one docs template
   ---
   #title
   Nuxt 3
-  
+
   #description
   Powered by Nuxt 3 for optimal performances and SEO.
   :::
@@ -95,7 +86,7 @@ All-in-one docs template
   ---
   #title
   Markdown
-  
+
   #description
   Write your pages with MDC thanks to Nuxt Content.
   :::
@@ -104,11 +95,11 @@ All-in-one docs template
   ---
   icon: i-lucide-sparkles
   target: _blank
-  to: https://ui.nuxt.com
+  to: https://ui3.nuxt.dev
   ---
   #title
-  Nuxt UI 3
-  
+  Nuxt UI v3
+
   #description
   Offers a very large set of full customizable components.
   :::
@@ -121,7 +112,7 @@ All-in-one docs template
   ---
   #title
   TypeScript
-  
+
   #description
   A fully typed development experience.
   :::
@@ -134,7 +125,7 @@ All-in-one docs template
   ---
   #title
   Nuxt Studio
-  
+
   #description
   Supported by Nuxt Studio for fast updates and previews.
   :::
@@ -143,12 +134,36 @@ All-in-one docs template
   ---
   icon: i-lucide-search
   target: _blank
-  to: https://ui.nuxt.com/pro/components/docs/docs-search
+  to: https://ui3.nuxt.dev/components/content-search
   ---
   #title
   Search
-  
+
   #description
-  A full-text search modal empowered by Fuse.js.
+  A full-text search modal powered by Fuse.js.
   :::
+::
+
+::u-page-section
+
+  :::u-page-c-t-a
+  ---
+  title: Start with Nuxt UI Pro today!
+  description: Nuxt UI Pro is free in development, but you need a license to use it in production.
+  variant: subtle
+  links:
+    - label: Buy now
+      to: 'https://ui.nuxt.com/pro/purchase'
+      target: _blank
+      icon: i-lucide-shopping-cart
+      color: neutral
+    - label: License
+      to: 'https://ui3.nuxt.dev/getting-started/license'
+      trailingIcon: i-lucide-circle-help
+      target: _blank
+      color: neutral
+      variant: subtle
+  ---
+  :::
+
 ::
