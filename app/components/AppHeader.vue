@@ -22,20 +22,22 @@ const { header } = useAppConfig()
       </template>
     </UContentSearchButton>
 
-    <template #title>
-      <template v-if="header?.logo?.dark || header?.logo?.light">
+    <template #left>
+      <NuxtLink to="/">
         <UColorModeImage
-          v-bind="header?.logo"
-          class="h-6 w-auto"
+          v-if="header?.logo?.dark || header?.logo?.light"
+          :light="header?.logo?.light!"
+          :dark="header?.logo?.dark!"
+          :alt="header?.logo?.alt"
+          class="h-6 w-auto shrink-0"
         />
-      </template>
-      <template v-else>
-        Nuxt UI Pro <UBadge
-          label="Docs"
-          variant="subtle"
-          class="mb-0.5"
+        <LogoPro
+          v-else
+          class="w-auto h-6 shrink-0"
         />
-      </template>
+      </NuxtLink>
+
+      <TemplateMenu />
     </template>
 
     <template #right>
