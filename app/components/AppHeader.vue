@@ -24,7 +24,17 @@ const { header } = useAppConfig()
 
     <template #left>
       <NuxtLink to="/">
-        <LogoPro class="w-auto h-6 shrink-0" />
+        <UColorModeImage
+          v-if="header?.logo?.dark || header?.logo?.light"
+          :light="header?.logo?.light!"
+          :dark="header?.logo?.dark!"
+          :alt="header?.logo?.alt"
+          class="h-6 w-auto shrink-0"
+        />
+        <LogoPro
+          v-else
+          class="w-auto h-6 shrink-0"
+        />
       </NuxtLink>
 
       <TemplateMenu />
