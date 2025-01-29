@@ -12,10 +12,10 @@
     "typecheck": "nuxt typecheck"
   },
   "dependencies": {
-    "@iconify-json/lucide": "^1.2.24",
-    "@iconify-json/simple-icons": "^1.2.21",
+    "@iconify-json/lucide": "^1.2.25",
+    "@iconify-json/simple-icons": "^1.2.22",
     "@iconify-json/vscode-icons": "^1.2.10",
-    "@nuxt/content": "^3.0.0",
+    "@nuxt/content": "^3.0.1",
     "@nuxt/fonts": "^0.10.3",
     "@nuxt/image": "^1.9.0",
     "@nuxt/ui-pro": "https://pkg.pr.new/@nuxt/ui-pro@ee19715",
@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@nuxt/eslint": "^0.7.5",
-    "eslint": "^9.18.0",
+    "eslint": "^9.19.0",
     "typescript": "^5.7.3",
     "vue-tsc": "^2.2.0"
   },
