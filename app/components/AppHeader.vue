@@ -26,6 +26,7 @@ const { header } = useAppConfig()
       <NuxtLink to="/">
         <LogoPro class="w-auto h-6 shrink-0" />
       </NuxtLink>
+
       <TemplateMenu />
     </template>
 
