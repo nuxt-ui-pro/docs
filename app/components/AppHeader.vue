@@ -22,7 +22,7 @@ const { header } = useAppConfig()
       </template>
     </UContentSearchButton>
 
-    <template #left>
+    <template v-if="header?.logo?.dark || header?.logo?.light || !header?.logo?.alt" #left>
       <NuxtLink to="/">
         <UColorModeImage
           v-if="header?.logo?.dark || header?.logo?.light"
@@ -37,7 +37,11 @@ const { header } = useAppConfig()
         />
       </NuxtLink>
 
-      <TemplateMenu />
+      <TemplateMenu v-if="!(header?.logo?.dark || header?.logo?.light)" />
+    </template>
+
+    <template v-if="header?.logo?.alt && !(header?.logo?.dark || header?.logo?.light)" #title>
+      {{header?.logo?.alt}}
     </template>
 
     <template #right>
