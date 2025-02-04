@@ -7,7 +7,11 @@ const { header } = useAppConfig()
 </script>
 
 <template>
-  <UHeader :ui="{ center: 'flex-1' }">
+  <UHeader
+    :ui="{ center: 'flex-1' }"
+    :title="header?.title"
+    :to="header?.to"
+  >
     <UContentSearchButton
       v-if="header?.search"
       label="Search..."
@@ -22,26 +26,27 @@ const { header } = useAppConfig()
       </template>
     </UContentSearchButton>
 
-    <template v-if="header?.logo?.dark || header?.logo?.light || !header?.logo?.alt" #left>
-      <NuxtLink to="/">
-        <UColorModeImage
-          v-if="header?.logo?.dark || header?.logo?.light"
-          :light="header?.logo?.light!"
-          :dark="header?.logo?.dark!"
-          :alt="header?.logo?.alt"
-          class="h-6 w-auto shrink-0"
-        />
-        <LogoPro
-          v-else
-          class="w-auto h-6 shrink-0"
-        />
-      </NuxtLink>
-
-      <TemplateMenu v-if="!(header?.logo?.dark || header?.logo?.light)" />
+    <template
+      v-if="header?.logo?.dark || header?.logo?.light"
+      #title
+    >
+      <UColorModeImage
+        :light="header?.logo?.light!"
+        :dark="header?.logo?.dark!"
+        :alt="header?.logo?.alt"
+        class="h-6 w-auto shrink-0"
+      />
     </template>
 
-    <template v-if="header?.logo?.alt && !(header?.logo?.dark || header?.logo?.light)" #title>
-      {{header?.logo?.alt}}
+    <template
+      v-else
+      #left
+    >
+      <NuxtLink :to="header?.to || '/'">
+        <LogoPro class="w-auto h-6 shrink-0" />
+      </NuxtLink>
+
+      <TemplateMenu />
     </template>
 
     <template #right>

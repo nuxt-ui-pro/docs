@@ -93,6 +93,20 @@ export default defineNuxtSchema({
       description: 'Header configuration.',
       icon: 'i-mdi-page-layout-header',
       fields: {
+        title: field({
+          type: 'string',
+          title: 'Title',
+          description: 'Title to display in the header.',
+          icon: 'i-mdi-format-title',
+          default: ''
+        }),
+        to: field({
+          type: 'string',
+          title: 'To',
+          description: 'URL to redirect to when the title is clicked.',
+          icon: 'i-mdi-link-variant',
+          default: ''
+        }),
         logo: group({
           title: 'Logo',
           description: 'Header logo configuration.',
