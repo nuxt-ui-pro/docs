@@ -103,8 +103,8 @@ However to enable the live preview on the platform, you just need to activate st
 ```ts [nuxt.config.ts]
 export default defineNuxtConfig({
   content: {
-    studio: {
-      enabled: true
+    preview: {
+      api: 'https://api.nuxt.studio'
     }
   }
 })
