@@ -17,6 +17,8 @@ export default defineAppConfig({
     siteName: 'Nuxt UI Pro - Docs template'
   },
   header: {
+    title: '',
+    to: '/',
     logo: {
       alt: '',
       light: '',
