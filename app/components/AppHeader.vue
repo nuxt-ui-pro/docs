@@ -70,7 +70,7 @@ const { header } = useAppConfig()
       </template>
     </template>
 
-    <template #content>
+    <template #body>
       <UContentNavigation
         highlight
         :navigation="navigation"
