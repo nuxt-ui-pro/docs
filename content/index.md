@@ -9,13 +9,10 @@ seo:
 ---
 orientation: horizontal
 ---
-
   :::prose-pre{filename="Terminal"}
-
   ```bash
   npx nuxi init -t github:nuxt-ui-pro/docs#v3
   ```
-
   :::
 
 #title
@@ -73,7 +70,7 @@ All-in-one documentation template
   ---
   #title
   Nuxt 3
-
+  
   #description
   Powered by Nuxt 3 for optimal performances and SEO.
   :::
@@ -86,7 +83,7 @@ All-in-one documentation template
   ---
   #title
   Markdown
-
+  
   #description
   Write your pages with MDC thanks to Nuxt Content.
   :::
@@ -99,7 +96,7 @@ All-in-one documentation template
   ---
   #title
   Nuxt UI v3
-
+  
   #description
   Offers a very large set of full customizable components.
   :::
@@ -112,7 +109,7 @@ All-in-one documentation template
   ---
   #title
   TypeScript
-
+  
   #description
   A fully typed development experience.
   :::
@@ -125,7 +122,7 @@ All-in-one documentation template
   ---
   #title
   Nuxt Studio
-
+  
   #description
   Supported by Nuxt Studio for fast updates and previews.
   :::
@@ -138,32 +135,31 @@ All-in-one documentation template
   ---
   #title
   Search
-
+  
   #description
   A full-text search modal powered by Fuse.js.
   :::
 ::
 
 ::u-page-section
-
   :::u-page-c-t-a
   ---
-  title: Start with Nuxt UI Pro today!
-  description: Nuxt UI Pro is free in development, but you need a license to use it in production.
-  variant: subtle
   links:
     - label: Buy now
-      to: 'https://ui.nuxt.com/pro/purchase'
+      to: https://ui.nuxt.com/pro/purchase
       target: _blank
       icon: i-lucide-shopping-cart
       color: neutral
     - label: License
-      to: 'https://ui3.nuxt.dev/getting-started/license'
+      to: https://ui3.nuxt.dev/getting-started/license
       trailingIcon: i-lucide-circle-help
       target: _blank
       color: neutral
       variant: subtle
+  description: Nuxt UI Pro is free in development, but you need a license to use
+    it in production.
+  title: Start with Nuxt UI Pro today!
+  variant: subtle
   ---
   :::
-
 ::
