@@ -6,6 +6,7 @@ if (!page.value) {
 
 useSeoMeta({
   title: page.value.seo.title,
+  titleTemplate: null,
   ogTitle: page.value.seo.title,
   description: page.value.seo.description,
   ogDescription: page.value.seo.description
