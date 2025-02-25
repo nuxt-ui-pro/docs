@@ -29,6 +29,9 @@ importers:
       nuxt:
         specifier: ^3.15.2
         version: 3.15.2(@libsql/client@0.14.0)(@parcel/watcher@2.5.0)(@types/node@22.10.7)(better-sqlite3@11.8.1)(db0@0.2.3(@libsql/client@0.14.0)(better-sqlite3@11.8.1))(eslint@9.20.1(jiti@2.4.2))(ioredis@5.4.2)(lightningcss@1.29.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.31.0)(terser@5.37.0)(typescript@5.7.3)(vite@6.0.9(@types/node@22.10.7)(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.37.0)(yaml@2.7.0))(vue-tsc@2.2.0(typescript@5.7.3))(yaml@2.7.0)
+      nuxt-llms:
+        specifier: 0.1.0
+        version: 0.1.0(magicast@0.3.5)
       nuxt-og-image:
         specifier: ^4.1.2
         version: 4.1.2(magicast@0.3.5)(vite@6.0.9(@types/node@22.10.7)(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.37.0)(yaml@2.7.0))(vue@3.5.13(typescript@5.7.3))
@@ -3850,6 +3853,9 @@ packages:
     resolution: {integrity: sha512-iq7hbSnfp4Ff/PTMYBF8pYabTQuF3u7HVN66Kb3hOnrnaPEdXEn/q6HkAn5V8UjOVSgXYpvycM0wSnwyADYNVA==}
     hasBin: true
 
+  nuxt-llms@0.1.0:
+    resolution: {integrity: sha512-sMH3s2wZrFKxnM+PRG7PY5AApxrv7LJAKoDVk0SJyjGlQa20I6d1cJpMx4J6AayrGA/GdBtqObzFodIhOPDJoQ==}
+
   nuxt-og-image@4.1.2:
     resolution: {integrity: sha512-TeBsI9Ic/ETD4fTpycKW9lYp5Q2hd5ozE5Bt22opTsIuqzSx20ZKzonj0yiHRgShMhGE+YMZhFzk7YvDaNNWGA==}
     engines: {node: '>=18.0.0'}
@@ -6154,7 +6160,7 @@ snapshots:
   '@libsql/isomorphic-ws@0.1.5':
     dependencies:
       '@types/ws': 8.5.13
-      ws: 8.18.0
+      ws: 8.18.1
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
@@ -10315,6 +10321,13 @@ snapshots:
       typescript: 5.7.3
       ufo: 1.5.4
       vue-component-meta: 2.2.0(typescript@5.7.3)
+    transitivePeerDependencies:
+      - magicast
+      - supports-color
+
+  nuxt-llms@0.1.0(magicast@0.3.5):
+    dependencies:
+      '@nuxt/kit': 3.15.4(magicast@0.3.5)
     transitivePeerDependencies:
       - magicast
       - supports-color

@@ -5,7 +5,8 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/ui-pro',
     '@nuxt/content',
-    'nuxt-og-image'
+    'nuxt-og-image',
+    'nuxt-llms'
   ],
 
   devtools: {
@@ -40,5 +41,31 @@ export default defineNuxtConfig({
 
   icon: {
     provider: 'iconify'
+  },
+
+  llms: {
+    domain: 'https://docs-template.nuxt.dev/',
+    title: 'Nuxt UI Pro - Docs template',
+    description: 'A template for building documentation with Nuxt UI Pro and Nuxt Content',
+    full: {
+      title: 'Nuxt UI Pro - Docs template Full Documentation',
+      description: 'This is the full documentation for the Nuxt UI Pro - Docs template'
+    },
+    sections: [
+      {
+        title: 'Getting Started',
+        contentCollection: 'docs',
+        contentFilters: [
+          { field: 'path', operator: 'LIKE', value: '/getting-started%' }
+        ]
+      },
+      {
+        title: 'Essentials',
+        contentCollection: 'docs',
+        contentFilters: [
+          { field: 'path', operator: 'LIKE', value: '/essentials%' }
+        ]
+      }
+    ]
   }
 })
