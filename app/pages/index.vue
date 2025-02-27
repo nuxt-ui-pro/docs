@@ -9,7 +9,9 @@ useSeoMeta({
   titleTemplate: null,
   ogTitle: page.value.seo.title,
   description: page.value.seo.description,
-  ogDescription: page.value.seo.description
+  ogDescription: page.value.seo.description,
+  ogImage: 'https://docs-template.nuxt.dev/social-card.png',
+  twitterImage: 'https://docs-template.nuxt.dev/social-card.png'
 })
 </script>
 
