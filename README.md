@@ -6,7 +6,7 @@
 [![Nuxt Studio](https://img.shields.io/badge/Open%20in%20Nuxt%20Studio-18181B?&logo=nuxt.js&logoColor=3BB5EC)](https://nuxt.studio/themes/docs)
 
 - [Live demo](https://docs-template.nuxt.dev)
-- [Documentation](https://ui3.nuxt.dev/getting-started/installation/pro/nuxt)
+- [Documentation](https://ui.nuxt.com/getting-started/installation/pro/nuxt)
 - [Clone on Nuxt Studio](https://content.nuxt.com/templates/docs)
 
 [![Deploy to NuxtHub](https://hub.nuxt.com/button.svg)](https://hub.nuxt.com/new?repo=nuxt-ui-pro/docs)

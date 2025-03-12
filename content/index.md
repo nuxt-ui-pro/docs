@@ -37,7 +37,7 @@ Nuxt UI Pro is a collection of premium components built on top of Nuxt UI to cre
   icon: i-simple-icons-github
   size: xl
   target: _blank
-  to: https://github.com/nuxt-ui-pro/docs/tree/v3
+  to: https://github.com/nuxt-ui-pro/docs
   variant: subtle
   ---
   Use this template
@@ -54,7 +54,7 @@ All-in-one documentation template
   color: neutral
   size: lg
   target: _blank
-  to: https://ui3.nuxt.dev/getting-started/installation/pro/nuxt
+  to: https://ui.nuxt.com/getting-started/installation/pro/nuxt
   trailingIcon: i-lucide-arrow-right
   variant: subtle
   ---
@@ -92,7 +92,7 @@ All-in-one documentation template
   ---
   icon: i-lucide-sparkles
   target: _blank
-  to: https://ui3.nuxt.dev
+  to: https://ui.nuxt.com
   ---
   #title
   Nuxt UI v3
@@ -131,7 +131,7 @@ All-in-one documentation template
   ---
   icon: i-lucide-search
   target: _blank
-  to: https://ui3.nuxt.dev/components/content-search
+  to: https://ui.nuxt.com/components/content-search
   ---
   #title
   Search
@@ -151,7 +151,7 @@ All-in-one documentation template
       icon: i-lucide-shopping-cart
       color: neutral
     - label: License
-      to: https://ui3.nuxt.dev/getting-started/license
+      to: https://ui.nuxt.com/getting-started/license
       trailingIcon: i-lucide-circle-help
       target: _blank
       color: neutral

@@ -28,7 +28,7 @@ export default defineAppConfig({
     colorMode: true,
     links: [{
       'icon': 'i-simple-icons-github',
-      'to': 'https://github.com/nuxt-ui-pro/docs/tree/v3',
+      'to': 'https://github.com/nuxt-ui-pro/docs',
       'target': '_blank',
       'aria-label': 'GitHub'
     }]
@@ -71,7 +71,7 @@ export default defineAppConfig({
       }, {
         icon: 'i-lucide-book-open',
         label: 'Nuxt UI Pro docs',
-        to: 'https://ui3.nuxt.dev/getting-started/installation/pro/nuxt',
+        to: 'https://ui.nuxt.com/getting-started/installation/pro/nuxt',
         target: '_blank'
       }, {
         icon: 'i-simple-icons-nuxtdotjs',
