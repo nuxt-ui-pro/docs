@@ -14,7 +14,7 @@
 ## Quick Start
 
 ```bash [Terminal]
-npx nuxi init -t github:nuxt-ui-pro/docs
+npx nuxi init -t github:nuxt-ui-pro/docs#v3
 ```
 
 ## Setup
