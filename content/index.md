@@ -9,9 +9,9 @@ seo:
 ---
 orientation: horizontal
 ---
-  :::prose-pre{filename="Terminal" code="npx nuxi init -t github:nuxt-ui-pro/docs"}
+  :::prose-pre{filename="Terminal" code="npx nuxi init -t github:nuxt-ui-pro/docs#v3"}
   ```bash
-  npx nuxi init -t github:nuxt-ui-pro/docs
+  npx nuxi init -t github:nuxt-ui-pro/docs#v3
   ```
   :::
 
