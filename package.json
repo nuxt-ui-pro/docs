@@ -19,12 +19,12 @@
     "@nuxt/image": "^1.10.0",
     "@nuxt/ui-pro": "^3.0.1",
     "nuxt": "^3.16.1",
-    "nuxt-llms": "0.1.0",
+    "nuxt-llms": "0.1.1",
     "nuxt-og-image": "^5.0.5"
   },
   "devDependencies": {
     "@nuxt/eslint": "^1.2.0",
-    "eslint": "^9.22.0",
+    "eslint": "^9.23.0",
     "typescript": "^5.8.2",
     "vue-tsc": "^2.2.2"
   },
