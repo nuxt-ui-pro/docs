@@ -18,7 +18,7 @@
     "@nuxt/content": "^3.4.0",
     "@nuxt/image": "^1.10.0",
     "@nuxt/ui-pro": "^3.0.2",
-    "nuxt": "^3.16.1",
+    "nuxt": "^3.16.2",
     "nuxt-llms": "0.1.2",
     "nuxt-og-image": "^5.1.1"
   },
