@@ -8,8 +8,8 @@ export default defineAppConfig({
   uiPro: {
     footer: {
       slots: {
-        root: 'border-t border-(--ui-border)',
-        left: 'text-sm text-(--ui-text-muted)'
+        root: 'border-t border-default',
+        left: 'text-sm text-muted'
       }
     }
   },
