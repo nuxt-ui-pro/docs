@@ -7,7 +7,7 @@ definePageMeta({
 })
 
 const route = useRoute()
-const { toc, seo } = useAppConfig()
+const { toc } = useAppConfig()
 const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
 
 const { data: page } = await useAsyncData(route.path, () => queryCollection('docs').path(route.path).first())
@@ -21,11 +21,14 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
   })
 })
 
+const title = page.value.seo?.title || page.value.title
+const description = page.value.seo?.description || page.value.description
+
 useSeoMeta({
-  title: page.value.seo.title,
-  ogTitle: `${page.value.seo.title} - ${seo?.siteName}`,
-  description: page.value.seo.description,
-  ogDescription: page.value.seo.description
+  title,
+  ogTitle: title,
+  description,
+  ogDescription: description
 })
 
 const headline = computed(() => findPageHeadline(navigation?.value, page.value))
