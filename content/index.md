@@ -1,6 +1,6 @@
 ---
 seo:
-  title: Nuxt UI Pro - Docs template
+  title: Nuxt Docs Template
   description: Nuxt UI Pro is a collection of premium Vue components built on top
     of Nuxt UI to create beautiful & responsive Nuxt applications in minutes.
 ---
@@ -74,7 +74,7 @@ All-in-one documentation template
   ---
   #title
   Nuxt 3
-  
+
   #description
   Powered by Nuxt 3 for optimal performances and SEO.
   :::
@@ -87,7 +87,7 @@ All-in-one documentation template
   ---
   #title
   Markdown
-  
+
   #description
   Write your pages with MDC thanks to Nuxt Content.
   :::
@@ -100,7 +100,7 @@ All-in-one documentation template
   ---
   #title
   Nuxt UI v3
-  
+
   #description
   Offers a very large set of full customizable components.
   :::
@@ -113,7 +113,7 @@ All-in-one documentation template
   ---
   #title
   TypeScript
-  
+
   #description
   A fully typed development experience.
   :::
@@ -126,7 +126,7 @@ All-in-one documentation template
   ---
   #title
   Nuxt Studio
-  
+
   #description
   Supported by Nuxt Studio for fast updates and previews.
   :::
@@ -139,7 +139,7 @@ All-in-one documentation template
   ---
   #title
   Search
-  
+
   #description
   A full-text search modal powered by Fuse.js.
   :::

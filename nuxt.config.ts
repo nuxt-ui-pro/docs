@@ -55,11 +55,11 @@ export default defineNuxtConfig({
 
   llms: {
     domain: 'https://docs-template.nuxt.dev/',
-    title: 'Nuxt UI Pro - Docs template',
-    description: 'A template for building documentation with Nuxt UI Pro and Nuxt Content',
+    title: 'Nuxt Docs Template',
+    description: 'A template for building documentation with Nuxt UI Pro and Nuxt Content.',
     full: {
-      title: 'Nuxt UI Pro - Docs template Full Documentation',
-      description: 'This is the full documentation for the Nuxt UI Pro - Docs template'
+      title: 'Nuxt Docs Template - Full Documentation',
+      description: 'This is the full documentation for the Nuxt Docs Template.'
     },
     sections: [
       {
