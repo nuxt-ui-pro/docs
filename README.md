@@ -10,9 +10,9 @@ This template lets you build a documentation with [Nuxt UI Pro](https://ui.nuxt.
 
 <a href="https://docs-template.nuxt.dev/" target="_blank">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://assets.hub.nuxt.com/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL2xhbmRpbmctdGVtcGxhdGUubnV4dC5kZXYiLCJpYXQiOjE3Mzk0NjMzNzV9.ja2nUDVOoIFvyaMmg9Jn51uNMoYYt4WA1KWUQBWwUPo.jpg?theme=dark">
-    <source media="(prefers-color-scheme: light)" srcset="https://assets.hub.nuxt.com/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL2xhbmRpbmctdGVtcGxhdGUubnV4dC5kZXYiLCJpYXQiOjE3Mzk0NjMzNzV9.ja2nUDVOoIFvyaMmg9Jn51uNMoYYt4WA1KWUQBWwUPo.jpg?theme=light">
-    <img alt="Nuxt UI Pro Starter Template" src="https://assets.hub.nuxt.com/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL2xhbmRpbmctdGVtcGxhdGUubnV4dC5kZXYiLCJpYXQiOjE3Mzk0NjMzNzV9.ja2nUDVOoIFvyaMmg9Jn51uNMoYYt4WA1KWUQBWwUPo.jpg">
+    <source media="(prefers-color-scheme: dark)" srcset="https://assets.hub.nuxt.com/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL2RvY3MtdGVtcGxhdGUubnV4dC5kZXYiLCJpYXQiOjE3Mzk0NjM0MTd9.ltVAqPgKG38O01X1zl6MXfrJc55nf9OewXNFjpZ_2JY.jpg?theme=dark">
+    <source media="(prefers-color-scheme: light)" srcset="https://assets.hub.nuxt.com/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL2RvY3MtdGVtcGxhdGUubnV4dC5kZXYiLCJpYXQiOjE3Mzk0NjM0MTd9.ltVAqPgKG38O01X1zl6MXfrJc55nf9OewXNFjpZ_2JY.jpg?theme=light">
+    <img alt="Nuxt Docs Template" src="https://assets.hub.nuxt.com/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL2RvY3MtdGVtcGxhdGUubnV4dC5kZXYiLCJpYXQiOjE3Mzk0NjM0MTd9.ltVAqPgKG38O01X1zl6MXfrJc55nf9OewXNFjpZ_2JY.jpg">
   </picture>
 </a>
 
