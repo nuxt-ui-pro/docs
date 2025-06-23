@@ -36,7 +36,8 @@ export default defineNuxtConfig({
       routes: [
         '/'
       ],
-      crawlLinks: true
+      crawlLinks: true,
+      autoSubfolderIndex: false
     }
   },
 
