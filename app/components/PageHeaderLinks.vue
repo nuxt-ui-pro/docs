@@ -8,7 +8,7 @@ const site = useSiteConfig()
 const isCopying = ref(false)
 console.log(site)
 
-const mdPath = computed(() => `${site.url}raw${route.path}.md`)
+const mdPath = computed(() => `${site.url}/raw${route.path}.md`)
 
 const items = [
   {
