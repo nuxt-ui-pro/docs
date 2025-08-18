@@ -3,12 +3,12 @@ export default defineAppConfig({
     colors: {
       primary: 'green',
       neutral: 'slate'
-    }
-  },
-  footer: {
-    slots: {
-      root: 'border-t border-default',
-      left: 'text-sm text-muted'
+    },
+    footer: {
+      slots: {
+        root: 'border-t border-default',
+        left: 'text-sm text-muted'
+      }
     }
   },
   seo: {
