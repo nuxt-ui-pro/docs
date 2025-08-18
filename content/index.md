@@ -149,20 +149,18 @@ All-in-one documentation template
   :::u-page-c-t-a
   ---
   links:
-    - label: Buy now
-      to: https://ui.nuxt.com/pro/purchase
+    - label: Get started
+      to: 'https://ui.nuxt.com/getting-started/installation'
       target: _blank
-      icon: i-lucide-shopping-cart
-      color: neutral
-    - label: License
-      to: https://ui.nuxt.com/getting-started/license
-      trailingIcon: i-lucide-circle-help
+      icon: i-lucide-arrow-right
+    - label: Clone on GitHub
+      to: 'https://github.com/nuxt-ui-pro/landing'
       target: _blank
-      color: neutral
       variant: subtle
-  description: Nuxt UI Pro is free in development, but you need a license to use
+      icon: i-simple-icons-github
+  description: Nuxt UI is a free and open-source UI library for Nuxt.
     it in production.
-  title: Start with Nuxt UI Pro today!
+  title: Start with Nuxt UI today!
   variant: subtle
   ---
   :::
