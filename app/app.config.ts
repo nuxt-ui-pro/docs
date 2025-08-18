@@ -5,12 +5,10 @@ export default defineAppConfig({
       neutral: 'slate'
     }
   },
-  uiPro: {
-    footer: {
-      slots: {
-        root: 'border-t border-default',
-        left: 'text-sm text-muted'
-      }
+  footer: {
+    slots: {
+      root: 'border-t border-default',
+      left: 'text-sm text-muted'
     }
   },
   seo: {
@@ -70,13 +68,13 @@ export default defineAppConfig({
         target: '_blank'
       }, {
         icon: 'i-lucide-book-open',
-        label: 'Nuxt UI Pro docs',
-        to: 'https://ui.nuxt.com/getting-started/installation/pro/nuxt',
+        label: 'Nuxt UI docs',
+        to: 'https://ui.nuxt.com/getting-started/installation',
         target: '_blank'
       }, {
-        icon: 'i-simple-icons-nuxtdotjs',
-        label: 'Purchase a license',
-        to: 'https://ui.nuxt.com/pro/purchase',
+        icon: 'i-lucide-arrow-right',
+        label: 'Get started',
+        to: 'https://ui.nuxt.com/getting-started/installation',
         target: '_blank'
       }]
     }
